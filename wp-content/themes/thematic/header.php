@@ -29,7 +29,7 @@ wp_head(); ?>
        
         </div>
         <div id="main-header">
-           <img src="http://blazingcloud.net/wordpress/wp-content/themes/thematicsamplechildtheme/images/header.png" alt="BlazingCloud" width=960/>
+           <img src="http://blazingcloud.net/wordpress/wp-content/themes/thematicsamplechildtheme/images/header.png" alt="BlazingCloud" />
 				<div id="contact_info">
 				414 Mason Street, #403
 				San Francisco CA 94102
