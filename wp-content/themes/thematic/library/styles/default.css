@@ -763,6 +763,10 @@ li.content-column {
 	top: 60px; 
 	right: 10px;
 }
+
+#contact_info p {
+	line-height:0.3em;
+}
 /*
     Content Asides
 */
