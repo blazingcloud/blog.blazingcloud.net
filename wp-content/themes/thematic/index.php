@@ -25,6 +25,5 @@ foreach ($options as $value) {
 
 		</div><!-- #content -->
 	</div><!-- #container -->
-<?php echo "Recent Posts:"; ?>
 <?php thematic_sidebar() ?>
 <?php get_footer() ?>
