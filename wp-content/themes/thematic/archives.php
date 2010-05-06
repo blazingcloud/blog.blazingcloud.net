@@ -15,7 +15,7 @@ Template Name: Archives Page
 				<div class="entry-content">
 <?php the_content(); ?>
 
-<?php thematic_archives(); ?>
+<?php thematic_monthly_archives(); ?>
 
 <?php edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
 
