@@ -754,6 +754,13 @@ li.content-column {
 		width:260px;
 		margin-right:10px;
 }
+#contact_info {
+	color: white; 
+	width: 200px; 
+	position: absolute; 
+	top: 60px; 
+	right: 10px;
+}
 /*
     Content Asides
 */
