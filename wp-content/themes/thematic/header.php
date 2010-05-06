@@ -1,6 +1,6 @@
 <?php thematic_create_doctype(); echo " "; language_attributes(); echo ">\n";?>
 <head profile="http://gmpg.org/xfn/11">
-
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 <?php 
 
 thematic_doctitle();
