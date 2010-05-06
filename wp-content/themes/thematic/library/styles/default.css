@@ -757,6 +757,10 @@ li.content-column {
 		color:black;
 }
 
+#primary a{
+	color:black;
+}
+
 #contact_info {
 	color: white; 
 	width: 200px; 
