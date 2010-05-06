@@ -14,9 +14,14 @@ Template Name: Archives Page
 				<div class="entry-content">
 <?php the_content(); ?>
 
-<?php thematic_monthly_archives(); ?>
+<div class="archive-box">
+	<?php thematic_monthly_archives(); ?>
+</div>
 
-<?php wp_tag_cloud(); ?>
+<div class="archive-box">
+	<h2>Tag Cloud</h2>
+	<?php wp_tag_cloud(); ?>
+</div>
 
 <?php edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
 
