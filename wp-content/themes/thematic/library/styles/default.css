@@ -748,12 +748,14 @@ li.content-column {
     padding:0;
 }
 #primary {
-    border:1px solid #ccc;
+  	border: #a58765 solid;
     padding:5px 0 0 0;
     margin-bottom:22px;
 		width:260px;
 		margin-right:10px;
+		background: #FAFAFA none repeat scroll 0 0;   
 }
+
 #contact_info {
 	color: white; 
 	width: 200px; 
