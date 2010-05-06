@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Page Without a Title
+*/
+?>
 <?php get_header() ?>
 
 	<div id="container">
