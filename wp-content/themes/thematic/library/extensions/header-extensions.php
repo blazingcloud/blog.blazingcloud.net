@@ -28,7 +28,7 @@ function thematic_doctitle() {
       $content = single_post_title('', FALSE);
     }
     elseif ( is_home() || is_front_page() ) { 
-      $content = get_bloginfo('description');
+      $content = "Blazing Cloud Consulting";
     }
     elseif ( is_page() ) { 
       $content = single_post_title('', FALSE); 
