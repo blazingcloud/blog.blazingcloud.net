@@ -35,6 +35,7 @@ wp_head(); ?>
     </div><!-- #header-->
 
 <?php thematic_belowheader(); ?>   
+<?php echo "Recent Posts:"; ?>
 
     <div id="main">
     
