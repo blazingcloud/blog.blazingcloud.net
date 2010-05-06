@@ -30,6 +30,11 @@ wp_head(); ?>
         </div>
         <div id="main-header">
            <img src="http://blazingcloud.net/wordpress/wp-content/themes/thematicsamplechildtheme/images/header.png" alt="BlazingCloud"/>
+				<div style="color: white; width: 200px; position: absolute; top: 60px; right: 10px;">
+				414 Mason Street, #403
+				San Francisco CA 94102
+				fax: (415)738-5407
+				</div>
         </div>
         <?php thematic_header() ?>
     </div><!-- #header-->
