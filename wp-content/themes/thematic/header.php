@@ -31,9 +31,9 @@ wp_head(); ?>
         <div id="main-header">
            <img src="http://blazingcloud.net/wordpress/wp-content/themes/thematicsamplechildtheme/images/header.png" alt="BlazingCloud" />
 				<div id="contact_info">
-				414 Mason Street, #403
-				San Francisco CA 94102
-				fax: (415)738-5407
+				<p>414 Mason Street, Suite 403</p>
+				<p>San Francisco CA 94102</p>
+				<p>fax: (415)738-5407</p>
 				</div>
         </div>
         <?php thematic_header() ?>
