@@ -16,6 +16,7 @@ Template Name: Archives Page
 <?php the_content(); ?>
 
 <?php thematic_monthly_archives(); ?>
+<?php wp_tag_cloud(); ?>
 
 <?php edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
 
