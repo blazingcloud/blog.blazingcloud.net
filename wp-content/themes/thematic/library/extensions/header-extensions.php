@@ -21,14 +21,14 @@ function pageGetPageNo() {
 // Creates the content of the Title tag
 // Credits: Tarski Theme
 function thematic_doctitle() {
-    $site_name = get_bloginfo('name');
+    $site_name = "Blazing Cloud Consulting";
     $separator = '|';
         	
     if ( is_single() ) {
       $content = single_post_title('', FALSE);
     }
     elseif ( is_home() || is_front_page() ) { 
-      $content = "Blazing Cloud Consulting";
+      $content = get_bloginfo('description');
     }
     elseif ( is_page() ) { 
       $content = single_post_title('', FALSE); 
