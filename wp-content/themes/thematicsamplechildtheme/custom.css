@@ -28,7 +28,8 @@ body {
 }
 
 #main-header {
-    width: 960px;
+    width: 100%;
+		overflow:hidden;
     background: black;
 }
 
