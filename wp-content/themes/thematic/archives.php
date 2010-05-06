@@ -11,12 +11,11 @@ Template Name: Archives Page
 <?php the_post() ?>
 
 			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
-    			<?php thematic_postheader(); ?>
 				<div class="entry-content">
 <?php the_content(); ?>
 
 <?php thematic_monthly_archives(); ?>
-<h2>Tag Cloud</h2>
+
 <?php wp_tag_cloud(); ?>
 
 <?php edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
