@@ -15,7 +15,7 @@
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		<a href="<?php bloginfo('url'); ?>">
-			<img src='wp-content/themes/sandbox/images/logo.png' alt='Blazing Cloud' />
+			<img src='<?php bloginfo('url'); ?>/wp-content/themes/sandbox/images/logo.png' alt='Blazing Cloud' />
 		</a>
 	</div><!--  #header -->
 
