@@ -15,7 +15,7 @@
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		<a href="<?php bloginfo('url'); ?>">
-			<img src='<?php bloginfo('stylesheet_directory'); ?>/images/logo.png' alt='Blazing Cloud' />
+			<img src='<?php bloginfo('stylesheet_directory'); //this is a hack - should be template_directory - bug with thematic theme ?>/images/logo.png' alt='Blazing Cloud' />
 		</a>
 	</div><!--  #header -->
 
