@@ -11,9 +11,8 @@
 </head>
 
 <body class="<?php sandbox_body_class() ?>">
-
+<div id="header-wrap"></div>
 <div id="wrapper" class="hfeed">
-
 	<div id="header">
 		<a href="<?php bloginfo('url'); ?>">
 			<img src='wp-content/themes/sandbox/images/logo.png' alt='Blazing Cloud' />
