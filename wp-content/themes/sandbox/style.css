@@ -83,7 +83,7 @@ padding-right:10px;
 
 div#header-wrap {
 width:937px;
-height:40px;
+height:45px;
 margin:auto;
 background: url(images/header_bg.png) no-repeat;
 padding-left:20px;	
@@ -100,7 +100,7 @@ padding-right:10px;
 }
 
 div#access {
-background:url("images/top_nav.png") no-repeat scroll 0 0 transparent;
+background:url("images/top_nav.png") no-repeat scroll 0 2px transparent;
 float:left;
 margin-left:10px;
 width:67%;
@@ -130,9 +130,14 @@ div#menu ul a {
 color:white;
 display:block;
 font-size:12pt;
-margin-right:2.2em;
+margin-right:63px;
 text-decoration:none;
 text-transform:uppercase;
+padding:5px;
+}
+
+div#menu li:last-child a{
+background:#8ecd74;
 }
 
 div#menu ul a:hover {
@@ -175,6 +180,7 @@ padding:20px;
 
 div#primary {
 margin-top:2em;
+width:28%;
 }
 
 form#commentform .form-label {
@@ -300,7 +306,7 @@ div.sidebar h3 {
 font-size:1.2em;
 color:#69C6EB;
 margin-bottom:0.4em;
-margin-left:0.4em;
+margin-left:0.1em;
 }
 
 h3.widgettitle {
@@ -371,6 +377,6 @@ width:50%;
 }
 
 div.gallery *,div.sidebar div,div.sidebar ul {
-margin:0;
+margin-left:1em;
 padding:0;
 }
