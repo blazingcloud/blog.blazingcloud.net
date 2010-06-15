@@ -20,6 +20,10 @@ color:#69C6EB;
 text-decoration:none;
 }
 
+a:hover {
+color:#FFA341;
+}
+
 img { 
 border: none; 
 } 
