@@ -331,6 +331,12 @@ color:#8C8C8C;
 text-decoration:none;
 }
 
+div.sidebar li a:hover {
+color:#FFA341;
+}
+
+
+
 div.sidebar li form {
 margin:0.2em 0 0;
 padding:0;
