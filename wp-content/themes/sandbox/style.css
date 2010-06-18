@@ -47,8 +47,14 @@ color:#8C8C8C;
 }
 
 div.entry-content a{
-color:#8C8C8C;
+text-decoration:underline;
+color:#69C6EB;
 }
+
+div.entry-content a:hover{
+color:#FFA341;
+}
+
 
 div.entry-content h1 {
 color:#69C6EB;
