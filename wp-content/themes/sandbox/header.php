@@ -13,16 +13,17 @@
 <body class="<?php sandbox_body_class() ?>">
 <div id="header-wrap"></div>
 <div id="wrapper" class="hfeed">
-	<div id="header">
-		<a href="<?php bloginfo('url'); ?>">
-			<img src='<?php bloginfo('stylesheet_directory'); //this is a hack - should be template_directory - bug with thematic theme ?>/images/logo.png' alt='Blazing Cloud' />
-		</a>
-	</div><!--  #header -->
+	<div id="positioner">
+		<div id="header">
+			<a href="<?php bloginfo('url'); ?>">
+				<img src='<?php bloginfo('stylesheet_directory'); //this is a hack - should be template_directory - bug with thematic theme ?>/images/logo.png' alt='Blazing Cloud' />
+			</a>
+		</div><!--  #header -->
 
-	<div id="access">
-		<?php sandbox_globalnav() ?>
-	</div><!-- #access -->
+		<div id="access">
+			<?php sandbox_globalnav() ?>
+		</div><!-- #access -->
 	
-	<div id="cur-date">
-		<?php echo date("F j, Y"); ?>
-	</div>
+		<div id="cur-date">
+			<?php echo date("F j, Y"); ?>
+		</div>

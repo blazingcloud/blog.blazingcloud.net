@@ -12,6 +12,7 @@ body {
 font-family:Verdana, Arial, Helvetica;
 background:url(images/body_bg.png) repeat;
 font-size:11pt;
+padding-top:15px;
 }
 
 a {
@@ -109,6 +110,11 @@ padding-left:20px;
 padding-right:10px;
 }
 
+div#positioner {
+position:relative;
+top:-20px;
+left:5px; 
+}	
 div#access {
 background:url("images/top_nav.png") no-repeat scroll 0 2px transparent;
 float:left;
@@ -125,7 +131,7 @@ float:left;
 
 div#menu {
 height:1.5em;
-margin:1.5em 0 1em 3em;
+margin:1.5em 0 1em 1.5em;
 width:100%;
 }
 
@@ -139,15 +145,11 @@ padding:0;
 div#menu ul a {
 color:white;
 display:block;
-font-size:12pt;
-margin-right:63px;
+font-size:8.5pt;
+margin-right:61px;
 text-decoration:none;
 text-transform:uppercase;
 padding:5px;
-}
-
-div#menu li:last-child a{
-background:#8ecd74;
 }
 
 div#menu ul a:hover {
@@ -372,7 +374,7 @@ float:left;
 
 div#header {
 height:80px;
-width:265px;
+width:285px;
 float:left;
 }
 
