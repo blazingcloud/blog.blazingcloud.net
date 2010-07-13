@@ -17,6 +17,37 @@ function sandbox_globalnav() {
 	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
 }
 
+function blazingcloud_globalnav()
+{
+	$url = get_bloginfo('url');
+	$pages = array("Home" => "", "Classes" => "http://classes.blazingcloud.net", "Internships" => "internship", "Contact Us" => "contact-us", "Blazing Cloud" => "blog");
+	foreach ($pages as $page => $slug) {
+		
+			 $menu .= 	"<li ";
+	             if (is_page($page)) 
+	             {
+	              $menu .= "id='current'";
+	             }
+							 if ($page == "Classes")
+							 {
+									$menu .= "><a href='$slug'>$page</a>";
+							 } else {
+									if ($page == "Blazing Cloud") {
+										$page = "Blog";
+										if (!strpos($menu, "current")) {
+										  $menu .= "id='current'";	
+										}
+									}
+							 	 	$menu .= "><a href='$url/$slug'>$page</a>";
+							 }
+	     $menu .= "</li>";
+	}
+
+	$menu = '<ul>' . $menu . '</ul>';
+	$menu = '<div id="menu">' . $menu . "</div>\n";
+	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
+}
+
 // Generates semantic classes for BODY element
 function sandbox_body_class( $print = true ) {
 	global $wp_query, $current_user;

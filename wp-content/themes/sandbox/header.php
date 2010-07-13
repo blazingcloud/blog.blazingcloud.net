@@ -21,9 +21,5 @@
 		</div><!--  #header -->
 
 		<div id="access">
-			<?php sandbox_globalnav() ?>
+			<?php blazingcloud_globalnav() ?>
 		</div><!-- #access -->
-	
-		<div id="cur-date">
-			<?php echo date("F j, Y"); ?>
-		</div>

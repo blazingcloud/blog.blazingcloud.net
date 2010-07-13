@@ -1,6 +1,6 @@
 
 		<div id="footer">
-		Copyright 2010, Blazing Cloud LLC
+		Copyright 2010, Blazing Cloud Inc.
 		</div><!-- #footer -->
 	</div><!-- #container -->
 </div><!-- #wrapper .hfeed -->
