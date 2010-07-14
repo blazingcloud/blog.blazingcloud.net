@@ -8,6 +8,7 @@
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php printf( __( '%s latest posts', 'sandbox' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'sandbox' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
+	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 </head>
 
 <body class="<?php sandbox_body_class() ?>">
