@@ -20,7 +20,7 @@ function sandbox_globalnav() {
 function blazingcloud_globalnav()
 {
 	$url = get_bloginfo('url');
-	$pages = array("Home" => "", "Classes" => "http://classes.blazingcloud.net", "Internships" => "internship", "Contact Us" => "contact-us", "Blazing Cloud" => "blog");
+	$pages = array("Home" => "", "Classes" => "http://classes.blazingcloud.net", "Cross Training" => "crosstrain", "Contact Us" => "contact-us", "Blazing Cloud" => "blog");
 	foreach ($pages as $page => $slug) {
 		
 			 $menu .= 	"<li ";
