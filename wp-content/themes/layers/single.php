@@ -20,7 +20,7 @@
     </div><!-- div post-<?php the_ID(); ?> ends here -->
 <?php endwhile; else : ?>
 
-		<h1>Not Found</h1>
+		<h1>Single Not Found</h1>
 		<p>Sorry, but you are looking for something that isn't here.</p>
 
 <?php endif; ?>

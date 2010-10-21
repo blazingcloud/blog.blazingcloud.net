@@ -48,7 +48,7 @@
 
 	<?php else : ?>
 
-		<h1>Not Found</h1>
+		<h1>Archive Not Found</h1>
 		<p>Sorry We respect your curiosity! But, what you are looking is not present here. Don't be disappointed, keep the spirits high, keep learning, keep finding! Curiosity is good, first step towards innovation.</p>
 
 	<?php endif; ?>
