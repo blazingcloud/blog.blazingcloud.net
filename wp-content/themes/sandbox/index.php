@@ -1,7 +1,11 @@
 <?php get_header() ?>
 
-	<div id="container">
-		<div id="content">
+<div id="content-wrapper">
+    <div id="side-bar">           
+        <?php get_sidebar() ?>
+    </div><!-- side-bar -->
+            
+    <div id="main-content">
 
 			<div id="nav-above" class="navigation">
 				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Previous', 'sandbox' )) ?></div>
@@ -37,9 +41,11 @@
 				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Previous', 'sandbox' )) ?></div>
 				<div class="nav-next"><?php previous_posts_link(__( 'Next <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
 			</div>
+    
+        <div id="footer">
+            <p>Copyright 2010, Blazing Cloud, Inc.</p>
+        </div>
+    </div> <!-- #main-content -->
+</div><!-- #content-wrapper -->
 
-		</div><!-- #content -->
-	</div><!-- #container -->
-
-<?php get_sidebar() ?>
 <?php get_footer() ?>

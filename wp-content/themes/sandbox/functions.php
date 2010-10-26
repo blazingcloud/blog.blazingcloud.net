@@ -13,38 +13,50 @@ You should have received a copy of the GNU General Public License along with SAN
 function sandbox_globalnav() {
 	if ( $menu = str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') ) )
 		$menu = '<ul>' . $menu . '</ul>';
-	$menu = '<div id="menu">' . $menu . "</div>\n";
 	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
 }
 
-function blazingcloud_globalnav()
-{
+function blazingcloud_globalnav() {
+
+/*
+<ul>
+    <li class="home"><a class="home" href="#"></a></li>
+    <li class="portfolio"><a class="portfolio" href="#"></a></li>
+    <li class="classes"><a class="classes" href="#"></a></li>
+    <li class="cross-training"><a class="cross-training" href="#"></a></li>
+    <li class="contact-us"><a class="contact-us" href="#"></a></li>
+    <li class="blog"><a class="blog" href="#"></a></li>
+</ul>
+*/
+                    
 	$url = get_bloginfo('url');
-	$pages = array("Home" => "", "Classes" => "http://classes.blazingcloud.net", "Cross Training" => "crosstrain", "Contact Us" => "contact-us", "Blazing Cloud" => "blog");
-	foreach ($pages as $page => $slug) {
-		
-			 $menu .= 	"<li ";
-	             if (is_page($page)) 
-	             {
-	              $menu .= "id='current'";
-	             }
-							 if ($page == "Classes")
-							 {
-									$menu .= "><a href='$slug'>$page</a>";
-							 } else {
-									if ($page == "Blazing Cloud") {
-										$page = "Blog";
-										if (!strpos($menu, "current")) {
-										  $menu .= "id='current'";	
-										}
-									}
-							 	 	$menu .= "><a href='$url/$slug'>$page</a>";
-							 }
-	     $menu .= "</li>";
-	}
+	$pages = array("Home" => $url, 
+	               "Portfolio" => $url . "/portfolio", 
+	               "Classes" => "http://classes.blazingcloud.net", 
+	               "Cross Training" => $url . "/crosstrain", 
+	               "Contact Us" => $url . "/contact-us", 
+	               "Blog" => $url . "/blog");
+	               
+    foreach ($pages as $page => $slug) {
+    
+        $pageClass = strtolower(str_replace(' ', '-', $page));
+        
+        $menu .= '<li class="' . $pageClass . '">';
+        
+        $bloginfo = get_bloginfo('stylesheet_directory');
+        
+        $menu .= '<a href="' . $slug . '" class="' . $pageClass . '"';
+        
+        if (is_page($page)) {
+            $menu .= ' style="background-image:url(' . $bloginfo . "/assets/header/" . $pageClass . '-selected.png)">';
+        } else {
+            $menu .= '>';
+        }
+        
+        $menu .= "</a></li>";
+    }
 
 	$menu = '<ul>' . $menu . '</ul>';
-	$menu = '<div id="menu">' . $menu . "</div>\n";
 	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
 }
 
@@ -487,8 +499,8 @@ function sandbox_widgets_init() {
 	$p = array(
 		'before_widget'  =>   "\n\t\t\t" . '<li id="%1$s" class="widget %2$s">',
 		'after_widget'   =>   "\n\t\t\t</li>\n",
-		'before_title'   =>   "\n\t\t\t\t". '<h3 class="widgettitle">',
-		'after_title'    =>   "</h3>\n"
+		'before_title'   =>   "\n\t\t\t\t". '<h2 class="widgettitle">',
+		'after_title'    =>   "</h2>\n"
 	);
 
 	// Table for how many? Two? This way, please.

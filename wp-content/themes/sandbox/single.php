@@ -1,7 +1,11 @@
 <?php get_header() ?>
 
-	<div id="container">
-		<div id="content">
+<div id="content-wrapper">
+    <div id="side-bar">           
+        <?php get_sidebar() ?>
+    </div><!-- side-bar -->
+            
+    <div id="main-content">
 
 <?php the_post() ?>
 
@@ -50,9 +54,11 @@
 			</div>
 
 <?php comments_template() ?>
+    
+        <div id="footer">
+            <p>Copyright 2010, Blazing Cloud, Inc.</p>
+        </div>
+    </div> <!-- #main-content -->
+</div><!-- #content-wrapper -->
 
-		</div><!-- #content -->
-	</div><!-- #container -->
-
-<?php get_sidebar() ?>
 <?php get_footer() ?>

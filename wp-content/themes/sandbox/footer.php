@@ -1,12 +1,7 @@
 
-		<div id="footer">
-		Copyright 2010, Blazing Cloud Inc.
-		</div><!-- #footer -->
-	</div><!-- #container -->
-</div><!-- #wrapper .hfeed -->
-<div id='footer-wrap'></div><!-- #bottom-wrapper .hfeed -->
-<?php wp_footer() ?>
-<script type=\"text/javascript\">
+<div id="bottom-border-slice"></div>
+</div><!-- #wrapper -->
+<script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-18707466-1']);

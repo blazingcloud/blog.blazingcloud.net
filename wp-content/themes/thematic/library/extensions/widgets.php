@@ -23,12 +23,12 @@ function is_sidebar_active( $index ){
 }
 
 function thematic_before_title() {
-	$content = "<h3 class=\"widgettitle\">";
+	$content = "<h2 class=\"widgettitle\">";
 	return apply_filters('thematic_before_title', $content);
 }
 
 function thematic_after_title() {
-	$content = "</h3>\n";
+	$content = "</h2>\n";
 	return apply_filters('thematic_after_title', $content);
 }
 
