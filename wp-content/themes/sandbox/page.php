@@ -7,22 +7,11 @@ Page Without a Title
 <?php get_header() ?>
 
 <div id="content-wrapper">
-    <div id="side-bar">       
+    <div id="side-bar">  
         <?php
-        #FIXME: isn't there a better way to get portfolio's page id???
-        $page_title = trim(wp_title( NULL, 0, NULL));
-        $page_ID = -1;
-        if($page_title == "Portfolio") {
-            foreach(get_pages() as $page) {
-                $page_ID = $page->ID;
-                if(get_the_title($page_ID) == $page_title) {
-                    break;
-                }
-            }
-        }
-                                
-        if($page_ID != -1) {
-            get_portfolio($page_ID);
+        #if this is a portfolio page or it is a child of the portfolio page
+        if($post->post_title == "Portfolio" || trim(get_the_title($post->post_parent)) == "Portfolio") {
+            get_portfolio();
         } else {
             get_sidebar();
         }

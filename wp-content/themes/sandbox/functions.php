@@ -60,6 +60,19 @@ function blazingcloud_globalnav() {
 	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
 }
 
+function get_portfolio() {
+    $pages = get_pages(); 
+    $page_ID = 0;
+    
+    foreach ($pages as $pg) {
+        if($pg->post_title == "Portfolio") $page_ID = $pg->ID;
+    }
+
+    $html = '<ul class="portfolio">';
+    $html .= wp_list_pages("title_li=&child_of=".$page_ID."&echo=0");
+    $html .="</ul>";
+    echo $html;
+}
 // Generates semantic classes for BODY element
 function sandbox_body_class( $print = true ) {
 	global $wp_query, $current_user;

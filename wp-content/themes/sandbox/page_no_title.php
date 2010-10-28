@@ -7,8 +7,15 @@ Template Name: Page Without a Title
 <?php get_header() ?>
 
 <div id="content-wrapper">
-    <div id="side-bar">           
-        <?php get_sidebar() ?>
+    <div id="side-bar">     
+        <?php
+        #if this is a portfolio page or it is a child of the portfolio page
+        if($post->post_title == "Portfolio" || trim(get_the_title($post->post_parent)) == "Portfolio") {
+            get_portfolio();
+        } else {
+            get_sidebar();
+        }
+        ?>
     </div><!-- side-bar -->
             
     <div id="main-content">
