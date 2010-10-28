@@ -23,7 +23,16 @@ Page Without a Title
         <?php the_post() ?>
         <div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
             <div class="entry-content">
-                <?php the_content() ?>
+                <?php
+                if($post->post_title == "Portfolio") {
+                    $pages = get_pages('child_of='.$post->ID.'&sort_column=post_date&sort_order=desc');
+                    
+                    echo array_shift($pages)->post_content;
+                    
+                } else {
+                    the_content();
+                }
+                ?>
     
                 <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'sandbox' ) . '&after=</div>') ?>
     
