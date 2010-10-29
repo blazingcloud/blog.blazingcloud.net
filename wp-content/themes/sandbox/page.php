@@ -10,8 +10,10 @@ Page Without a Title
     <div id="side-bar">  
         <?php
         #if this is a portfolio page or it is a child of the portfolio page
-        if($post->post_title == "Portfolio" || trim(get_the_title($post->post_parent)) == "Portfolio") {
-            get_portfolio();
+        if($post->post_title == "Portfolio") {
+            get_portfolio($post->ID);
+        } else if(trim(get_the_title($post->post_parent)) == "Portfolio") {
+            get_portfolio($post->post_parent);
         } else {
             get_sidebar();
         }

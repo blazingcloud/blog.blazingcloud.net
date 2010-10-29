@@ -60,16 +60,34 @@ function blazingcloud_globalnav() {
 	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
 }
 
-function get_portfolio() {
-    $pages = get_pages(); 
+function get_portfolio($parent_ID) {
+    $pages = get_pages('child_of='.$parent_ID.'&sort_column=post_date&sort_order=desc'); 
     $page_ID = 0;
     
-    foreach ($pages as $pg) {
-        if($pg->post_title == "Portfolio") $page_ID = $pg->ID;
+    $html = '<ul class="portfolio">'; 
+            
+    if(trim(get_the_title($parent_ID)) == "Portfolio" && trim(get_the_title($post->ID)) == "Portfolio") {
+        $first_child = array_shift($pages);
+        $html .= '<li><a href="' . get_permalink( $first_child->ID ) . '" class="current" >';
+        $html .= trim(get_the_title($first_child->ID)) . '</a></li>';
     }
-
-    $html = '<ul class="portfolio">';
-    $html .= wp_list_pages("title_li=&child_of=".$page_ID."&echo=0");
+    
+    foreach ($pages as $pg) {
+        $parent_ID = $pg->post_parent;
+        
+        $page_title = trim(get_the_title($pg->ID));
+    
+        $parent_page_title = trim(get_the_title($parent_ID));
+        
+            $html .= '<li><a href="' . get_permalink( $pg->ID ) . '"';
+            
+            if(get_the_title() == $page_title) {
+                 $html .= ' class="current" ';
+            }
+            
+            $html .= '>' . $page_title . '</a></li>';
+    }
+    
     $html .="</ul>";
     echo $html;
 }
