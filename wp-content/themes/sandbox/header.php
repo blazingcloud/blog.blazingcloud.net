@@ -11,7 +11,7 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 </head>
 
-<body class="<?php sandbox_body_class() ?>">
+<body>
 
 <div id="wrapper">
     <div id="header">
