@@ -67,6 +67,8 @@ div#wrapper {
     width: 968px;
     padding: 0 36px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 div#header {
@@ -158,27 +160,27 @@ div#footer p {
 /* Navigation Links */
 /* This sucks but the images help with cross browser issues... */
 
-.home {
+div#navigation .home {
     width: 67px;
 }
 
-.portfolio {
+div#navigation .portfolio {
     width: 96px;
 }
 
-.classes {
+div#navigation .classes {
     width: 80px;
 }
 
-.cross-training {
+div#navigation .cross-training {
     width: 136px;
 }
 
-.contact-us {
+div#navigation .contact-us {
     width: 105px;
 }
 
-.blog {
+div#navigation .blog {
     width: 128px;
 }
 
