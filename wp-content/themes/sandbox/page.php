@@ -41,7 +41,7 @@ Page Without a Title
                 <?php edit_post_link( __( 'Edit', 'sandbox' ), '<span class="edit-link">', '</span>' ) ?>
     
             </div>
-        </div><!-- .post -->
+        </div><!-- .post (page) -->
     
         <?php if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
     

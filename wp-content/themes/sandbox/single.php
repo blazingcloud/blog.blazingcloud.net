@@ -46,7 +46,7 @@
 <?php edit_post_link( __( 'Edit', 'sandbox' ), "\n\t\t\t\t\t<span class=\"edit-link\">", "</span>" ) ?>
 
 				</div>
-			</div><!-- .post -->
+			</div><!-- .post (single) -->
 
 			<div id="nav-below" class="navigation">
 				<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' ) ?></div>
