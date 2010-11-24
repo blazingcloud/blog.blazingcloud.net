@@ -14,8 +14,8 @@
  * @package WordPress
  */
  
-define('WP_HOME', 'http://127.0.0.1/blazingcloud.net'); 
-define('WP_SITEURL', 'http://127.0.0.1/blazingcloud.net');
+define('WP_HOME', 'http://blazingcloud.net'); 
+define('WP_SITEURL', 'http://blazingcloud.net');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
