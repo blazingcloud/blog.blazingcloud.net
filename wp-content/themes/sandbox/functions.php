@@ -48,7 +48,7 @@ function blazingcloud_globalnav() {
         $menu .= '<a href="' . $slug . '" class="' . $pageClass . '"';
         
         if (is_page($page)) {
-            $menu .= ' style="background-image:url(' . $bloginfo . "/assets/header/" . $pageClass . '-selected.png)">';
+            $menu .= ' style="background:url(' . $bloginfo . "/assets/header/" . $pageClass . '.png) 0 -42px;">';
         } else {
             $menu .= '>';
         }
