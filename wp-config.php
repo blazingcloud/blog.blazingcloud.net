@@ -13,8 +13,8 @@
  *
  * @package WordPress
  */
- 
-define('WP_HOME', 'http://blazingcloud.net'); 
+
+define('WP_HOME', 'http://blazingcloud.net');
 define('WP_SITEURL', 'http://blazingcloud.net');
 
 // ** MySQL settings - You can get this info from your web host ** //
@@ -28,7 +28,7 @@ define('DB_USER', 'ultrablazing');
 define('DB_PASSWORD', 'bl@z1ngw0rdpr3ss');
 
 /** MySQL hostname */
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
