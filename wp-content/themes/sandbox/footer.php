@@ -1,4 +1,8 @@
-
+<div id="footer">
+    <div id="footer-content">
+        <p>Copyright 2010, Blazing Cloud, Inc.</p>
+    </div>
+</div>
 <div id="bottom-border-slice"></div>
 </div><!-- #wrapper -->
 <script type="text/javascript">

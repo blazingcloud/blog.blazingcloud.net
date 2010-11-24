@@ -45,9 +45,6 @@ Page Without a Title
     
         <?php if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
     
-        <div id="footer">
-            <p>Copyright 2010, Blazing Cloud, Inc.</p>
-        </div>
     </div> <!-- #main-content -->
 </div><!-- #content-wrapper -->
 
