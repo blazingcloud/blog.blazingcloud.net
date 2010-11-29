@@ -325,6 +325,10 @@ div#side-bar ul.portfolio li a {
     color: #66ccff;
 }
 
+div#side-bar ul.portfolio li:first-child {
+    
+}
+
 div#side-bar ul.portfolio li a.jccsf {
     background-image: url('assets/sidebar/jccsf.png');
 }
@@ -347,6 +351,10 @@ div#side-bar ul.portfolio li a.peerpressure {
 
 div#side-bar ul.portfolio li a.zigzagboard {
     background-image: url('assets/sidebar/zigzagboard.png');
+}
+
+div#side-bar ul.portfolio li a.captainrecruiter {
+    background-image: url('assets/sidebar/captainrecruiter.png');
 }
 
 div#side-bar ul.portfolio li a:hover {
