@@ -345,6 +345,10 @@ div#side-bar ul.portfolio li a.peerpressure {
     background-image: url('assets/sidebar/peerpressure.png');
 }
 
+div#side-bar ul.portfolio li a.zigzagboard {
+    background-image: url('assets/sidebar/zigzagboard.png');
+}
+
 div#side-bar ul.portfolio li a:hover {
     color: #fcbd5c;
 }
