@@ -392,3 +392,7 @@ h1.entry-title a {
     margin-top: 23px;
     margin-bottom: 18px;
 }
+
+div#main-content div.entry-content p > img {
+    margin: 15px;
+}
