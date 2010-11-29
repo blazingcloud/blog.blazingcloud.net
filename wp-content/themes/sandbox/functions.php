@@ -89,7 +89,7 @@ function get_portfolio($parent_ID) {
             
     if(trim(get_the_title($parent_ID)) == "Portfolio" && trim(get_the_title($post->ID)) == "Portfolio") {
         $first_child = array_shift($pages);
-        $html .= '<li><a class="' . strtolower(get_the_title($first_child->ID)) . '" href="' . get_permalink( $first_child->ID ) . '" class="current" >';
+        $html .= '<li><a class="' . strtolower(get_the_title(trim($first_child->ID))) . '" href="' . get_permalink( $first_child->ID ) . '" class="current" >';
         $html .= trim(get_the_title($first_child->ID)) . '</a></li>';
     }
     

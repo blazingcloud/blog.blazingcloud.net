@@ -366,6 +366,10 @@ div#side-bar div#tertiary ul.twitter li {
     margin: 15px 0;
 }
 
+div#side-bar div#tertiary ul.twitter li a {
+    color: #6CF;
+}
+
 div#side-bar div#tertiary h2 {
     padding-left: 17px;
 } 
