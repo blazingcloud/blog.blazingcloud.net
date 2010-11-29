@@ -89,7 +89,7 @@ function get_portfolio($parent_ID) {
             
     if(trim(get_the_title($parent_ID)) == "Portfolio" && trim(get_the_title($post->ID)) == "Portfolio") {
         $first_child = array_shift($pages);
-        $html .= '<li><a class="' . strtolower(str_replace (" ", "", get_the_title($first_child->ID))) . '" href="' . get_permalink( $first_child->ID ) . '" class="current" >';
+        $html .= '<li><a class="current ' . strtolower(str_replace (" ", "", get_the_title($first_child->ID))) . '" href="' . get_permalink( $first_child->ID ) . '" >';
         $html .= trim(get_the_title($first_child->ID)) . '</a></li>';
     }
     
@@ -99,12 +99,14 @@ function get_portfolio($parent_ID) {
         $page_title = trim(get_the_title($pg->ID));
     
         $parent_page_title = trim(get_the_title($parent_ID));
-        
-            $html .= '<li><a class="' . strtolower(str_replace(" ", "", $page_title)) . '" href="' . get_permalink( $pg->ID ) . '"';
+            
+            $css_class = strtolower(str_replace(" ", "", $page_title));
             
             if(get_the_title() == $page_title) {
-                 $html .= ' class="current" ';
+                 $css_class .= ' current';
             }
+            
+            $html .= '<li><a class="' . $css_class . '" href="' . get_permalink( $pg->ID ) . '"';
             
             $html .= '>' . $page_title . '</a></li>';
     }
