@@ -98,9 +98,9 @@ function get_portfolio($parent_ID) {
         
         $page_title = trim(get_the_title($pg->ID));
     
-        $parent_page_title = str_replace (" ", "", get_the_title($parent_ID));
+        $parent_page_title = trim(get_the_title($parent_ID));
         
-            $html .= '<li><a class="' . strtolower($page_title) . '" href="' . get_permalink( $pg->ID ) . '"';
+            $html .= '<li><a class="' . strtolower(str_replace(" ", "", $page_title)) . '" href="' . get_permalink( $pg->ID ) . '"';
             
             if(get_the_title() == $page_title) {
                  $html .= ' class="current" ';
