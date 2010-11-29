@@ -269,7 +269,7 @@ div#primary > ul {
 
 div#primary > ul li {
     list-style-image: url('assets/sidebar/list_image.png');
-    margin: 3px 0;
+    margin: 3px 0 0 17px;
 }
 
 div#primary > ul > li {
@@ -282,7 +282,7 @@ div#primary > ul > li h2.widgettitle{
 }
 
 div#secondary >ul >li > h2 {
-    padding-left: 17px;
+
 }
 
 /* Portfolio */
@@ -294,7 +294,6 @@ div#side-bar ul {
 }
 
 div#side-bar > div#primary > ul {
-    padding-left: 17px;
 } 
 
 div#side-bar ul.portfolio {
@@ -305,6 +304,7 @@ div#side-bar ul.portfolio li {
     list-style-type: none;
     height: 50px;
     margin-bottom: 10px;
+    padding-left: 17px;
 }
 
 div#side-bar ul.portfolio li a {
@@ -319,7 +319,7 @@ div#side-bar ul.portfolio li a {
 }
 
 div#side-bar ul.portfolio li:first-child {
-    
+    margin-left: 0;
 }
 
 div#side-bar ul.portfolio li a.jccsf {
@@ -380,7 +380,7 @@ div#side-bar div#tertiary ul.twitter li a {
 }
 
 div#side-bar div#tertiary h2 {
-    padding-left: 17px;
+    
 } 
 
 /* Blog */
