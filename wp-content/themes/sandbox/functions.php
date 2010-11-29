@@ -9,6 +9,27 @@ SANDBOX is distributed in the hope that it will be useful, but WITHOUT ANY WARRA
 You should have received a copy of the GNU General Public License along with SANDBOX. If not, see http://www.gnu.org/licenses/.
 */
 
+// Twitter feed
+function get_status($twitter_id, $hyperlinks = true) {
+    $c = curl_init();
+    curl_setopt($c, CURLOPT_URL, "http://twitter.com/statuses/user_timeline/$twitter_id.xml?count=5");
+    curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+    $src = curl_exec($c);
+    curl_close($c);
+    preg_match_all('/<text>(.*)<\/text>/', $src, $m);
+
+    $statuses = $m[1];
+    $statusCount = count($statuses);
+    $result = "";
+    
+    for ($i = 0; $i < $statusCount; $i += 1) {
+         $result .= "<li>" . trim($statuses[$i]) . "</li>";
+    }
+    
+    if( $hyperlinks ) $result = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]", "<a href=\"\\0\">\\0</a>", $result);
+    return($result);
+}
+
 // Produces a list of pages in the header without whitespace
 function sandbox_globalnav() {
 	if ( $menu = str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') ) )
@@ -68,7 +89,7 @@ function get_portfolio($parent_ID) {
             
     if(trim(get_the_title($parent_ID)) == "Portfolio" && trim(get_the_title($post->ID)) == "Portfolio") {
         $first_child = array_shift($pages);
-        $html .= '<li><a href="' . get_permalink( $first_child->ID ) . '" class="current" >';
+        $html .= '<li><a class="' . strtolower(get_the_title($first_child->ID)) . '" href="' . get_permalink( $first_child->ID ) . '" class="current" >';
         $html .= trim(get_the_title($first_child->ID)) . '</a></li>';
     }
     
@@ -79,7 +100,7 @@ function get_portfolio($parent_ID) {
     
         $parent_page_title = trim(get_the_title($parent_ID));
         
-            $html .= '<li><a href="' . get_permalink( $pg->ID ) . '"';
+            $html .= '<li><a class="' . strtolower($page_title) . '" href="' . get_permalink( $pg->ID ) . '"';
             
             if(get_the_title() == $page_title) {
                  $html .= ' class="current" ';

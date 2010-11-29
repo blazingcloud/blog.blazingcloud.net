@@ -1,3 +1,4 @@
+
 /* Default */
 
 body {
@@ -276,13 +277,12 @@ div#primary > ul > li {
     list-style-image: none;
     margin: 0;
 }
-
-div#primary > ul > li > h2 {
-    padding-left: 17px;
-}
-
 div#primary > ul > li h2.widgettitle{
     margin-top:0;
+}
+
+div#secondary >ul >li > h2 {
+    padding-left: 17px;
 }
 
 
@@ -294,30 +294,55 @@ li#tag_cloud-3 > div {
 
 /* Portfolio */
 
+div#side-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+div#side-bar > div#primary > ul {
+    padding-left: 17px;
+} 
+
 div#side-bar ul.portfolio {
-    margin:0;
-    padding:0;
     width: 256px;
 }
 
 div#side-bar ul.portfolio li {
     list-style-type: none;
-    background: url('assets/sidebar/dotted_line.png') no-repeat left bottom;
-    padding: 15px 0;
-}
-
-div#side-bar ul.portfolio li:first-child {
-    padding: 0 0 15px 0;
-}
-
-div#side-bar ul.portfolio li:last-child {
-    background: none;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 div#side-bar ul.portfolio li a {
+    background: no-repeat left center;
     font-weight: bold;
     font-size: 14px;
+    height: 50px;
+    padding-left: 60px;
+    line-height: 50px;
+    display: block;
     color: #66ccff;
+}
+
+div#side-bar ul.portfolio li a.jccsf {
+    background-image: url('assets/sidebar/jccsf.png');
+}
+
+div#side-bar ul.portfolio li a.metalingual {
+    background-image: url('assets/sidebar/metalingual.png');
+}
+
+div#side-bar ul.portfolio li a.mightysushi {
+    background-image: url('assets/sidebar/mightysushi.png');
+}
+
+div#side-bar ul.portfolio li a.gaze {
+    background-image: url('assets/sidebar/gaze.png');
+}
+
+div#side-bar ul.portfolio li a.peerpressure {
+    background-image: url('assets/sidebar/peerpressure.png');
 }
 
 div#side-bar ul.portfolio li a:hover {
@@ -327,6 +352,23 @@ div#side-bar ul.portfolio li a:hover {
 div#side-bar ul.portfolio li a.current {
     color: #fcbd5c;
 }
+
+div#side-bar div#tertiary ul.twitter {
+    padding: 0;
+    margin: 0;
+}
+
+div#side-bar div#tertiary ul.twitter li {
+    background-image:url("assets/sidebar/twitter.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+div#side-bar div#tertiary h2 {
+    padding-left: 17px;
+} 
 
 /* Blog */
 

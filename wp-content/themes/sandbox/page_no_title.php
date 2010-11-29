@@ -17,6 +17,8 @@ Template Name: Page Without a Title
         }
         ?>
     </div><!-- side-bar -->
+    
+    
             
     <div id="main-content">
     
