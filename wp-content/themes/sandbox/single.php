@@ -54,10 +54,6 @@
 			</div>
 
 <?php comments_template() ?>
-    
-        <div id="footer">
-            <p>Copyright 2010, Blazing Cloud, Inc.</p>
-        </div>
     </div> <!-- #main-content -->
 </div><!-- #content-wrapper -->
 
