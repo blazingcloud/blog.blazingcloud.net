@@ -41,10 +41,6 @@
 				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Previous', 'sandbox' )) ?></div>
 				<div class="nav-next"><?php previous_posts_link(__( 'Next <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
 			</div>
-    
-        <div id="footer">
-            <p>Copyright 2010, Blazing Cloud, Inc.</p>
-        </div>
     </div> <!-- #main-content -->
 </div><!-- #content-wrapper -->
 
