@@ -52,8 +52,8 @@
 
                 if (o.inView > numImages - 1) o.inView = numImages - 1; // check to make sure inview isnt greater than the number of images. inview should be at least two less than numimages (otherwise hinting wont work and animating left may catch a flash), but one less can work
                 $('p', obj).hide(); // Hide any text paragraphs in the carousel
-                $(obj).css({'position':'relative','overflow':'hidden', 'background' : 'url(http://127.0.0.1/blazingcloud.net/wp-content/themes/sandbox/assets/carousel_background.png) no-repeat', 'padding':'12px 0'}).width("896px").height(imgHeight); //,'overflow':'hidden'
-                $('ul', obj).css({'list-style':'none','margin':'0','padding':'0','position':'relative','overflow':'hidden'}).width("896px").height(imgHeight);
+                $(obj).css({'position':'relative','overflow':'hidden', 'background' : 'url(http://127.0.0.1/blazingcloud.net/wp-content/themes/sandbox/assets/carousel_background.png) no-repeat', 'padding':'12px 0'}).width("896px"); //,'overflow':'hidden'
+                $('ul', obj).css({'list-style':'none','margin':'0','padding':'0','position':'relative','overflow':'hidden'}).width("896px");
                 $('li', obj).css({'display':'block','float':'left','margin':'0 75px'}).width("746px");
 
                 // Move rightmost image over to the left
