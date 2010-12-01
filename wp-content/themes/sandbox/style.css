@@ -118,6 +118,7 @@ ul#home-content li#twitter li {
 
 ul#home-content li#twitter li:first-child {
     margin-top: 0;
+    padding-top: 0;
 }
 
 ul#home-content li#twitter li a {
@@ -127,13 +128,12 @@ ul#home-content li#twitter li a {
 
 ul#home-content li#recent-posts ul li {
     background: url('assets/sidebar/list_image.png') no-repeat left center;
-    padding-left: 15px;
+    padding: 4px 0 4px 15px;
 }
 
 ul#home-content li#recent-posts a {
     color: #8AC974;
     font-size: 12px;
-    line-height: 20px;
     text-decoration: none;
 }
 
