@@ -7,7 +7,7 @@ Template Name: Page Without a Title
 <?php get_header() ?>
 
 <div id="content-wrapper">
-    
+    <?php $title = trim(get_the_title(the_ID())); if($title == "Home") { ?>    
     <div id="infinite_carousel">   
         <ul>
             <li style="display: inline; float: left; "><a href="#">
@@ -54,6 +54,32 @@ Template Name: Page Without a Title
 	        </ul>
         </li>
     </ul>
+    <?php } else { ?>
+    
+        <?php the_post() ?>
+        <div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
+            <div class="entry-content">
+                <?php
+                if($post->post_title == "Portfolio") {
+                    $pages = get_pages('child_of='.$post->ID.'&sort_column=post_date&sort_order=desc');
+                    
+                    echo array_shift($pages)->post_content;
+                    
+                } else {
+                    the_content();
+                }
+                ?>
+    
+                <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'sandbox' ) . '&after=</div>') ?>
+    
+                <?php edit_post_link( __( 'Edit', 'sandbox' ), '<span class="edit-link">', '</span>' ) ?>
+    
+            </div>
+        </div><!-- .post (page) -->
+    
+    <?php } ?>
+    
+    
 </div><!-- #content-wrapper -->
 
 <?php get_footer() ?>

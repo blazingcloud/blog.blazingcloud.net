@@ -63,6 +63,12 @@ a img {
 /* Infinite Carousel */
  div#infinite_carousel {
      overflow: hidden;
+     height: 303px;
+ }
+ 
+ div#infinite_carousel ul {
+     overflow: hidden;
+     height: 303px;
  }
  
  div#infinite_carousel ul li a img {
