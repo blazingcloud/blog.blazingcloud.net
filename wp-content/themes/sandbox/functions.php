@@ -12,7 +12,7 @@ You should have received a copy of the GNU General Public License along with SAN
 // Twitter feed
 function get_status($twitter_id, $hyperlinks = true) {
     $c = curl_init();
-    curl_setopt($c, CURLOPT_URL, "http://twitter.com/statuses/user_timeline/$twitter_id.xml?count=5");
+    curl_setopt($c, CURLOPT_URL, "http://twitter.com/statuses/user_timeline/$twitter_id.xml?count=6");
     curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
     $src = curl_exec($c);
     curl_close($c);

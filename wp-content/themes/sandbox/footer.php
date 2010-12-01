@@ -1,6 +1,6 @@
 <div id="footer">
     <div id="footer-content">
-        <p>Copyright 2010, Blazing Cloud, Inc.</p>
+        <p>Copyright 2010, Blazing Cloud, Inc. :: <a href="<?php echo home_url(); ?>/contact-us">Contact Us</a></p>
     </div>
 </div>
 <div id="bottom-border-slice"></div>

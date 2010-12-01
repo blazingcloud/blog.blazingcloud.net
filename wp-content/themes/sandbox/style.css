@@ -6,13 +6,13 @@ body {
     background-image: url('assets/background.png');
     font-family:verdana, arial, helvetica, sans-serif;
     color: #000;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
 }
 
 h1 {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 23px;
     margin-bottom: 18px;
 }
@@ -46,15 +46,20 @@ h6 {
 p {
     font-size: 12px;
     margin-top: 0;
+    font-weight: normal;
 }
 
 a {
     color: #66ccff;
-    font-size: 12px;   
+    font-size: 10px;   
 }
 
 pre {
     
+}
+
+a img {
+    border: none;
 }
 
 /* Infinite Carousel */
@@ -100,7 +105,7 @@ ul#home-content li#twitter li {
     background-image:url("assets/twitter-icon.png");
     background-position: left center;
     background-repeat: no-repeat;
-    padding-left: 35px;
+    padding-left: 40px;
     margin: 15px 0;
 }
 
@@ -112,10 +117,15 @@ ul#home-content li#twitter li a {
     color: #6CF;
 }
 
+ul#home-content li#recent-posts ul li {
+    background: url('assets/sidebar/list_image.png') no-repeat left center;
+    padding-left: 15px;
+}
+
 ul#home-content li#recent-posts a {
-    font-size: 14px;
     color: #8AC974;
-    line-height: 30px;
+    font-size: 12px;
+    line-height: 20px;
     text-decoration: none;
 }
 
@@ -161,6 +171,15 @@ div#footer {
    height: 20px;
    padding: 16px 0;
    background-image: url('assets/background-middle-slice.png');
+}
+
+div#footer a {
+   color: white;
+   text-decoration: none;
+}
+
+div#footer a:hover {
+    color: #66ccff;
 }
 
 div#footer-content {
