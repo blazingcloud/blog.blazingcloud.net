@@ -33,7 +33,7 @@ Template Name: Page Without a Title
             <h1>Expert Advice</h1>
             <ul>
                 <?php
-                    $postslist = get_posts('posts_per_page=10&order=DESC');
+                    $postslist = get_posts('numberposts=8&order=DESC');
                     foreach ($postslist as $post) : 
                     setup_postdata($post);
                 ?> 

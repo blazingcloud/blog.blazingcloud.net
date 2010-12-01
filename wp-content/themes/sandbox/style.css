@@ -5,14 +5,15 @@ body {
     margin: 0;
     background-image: url('assets/background.png');
     font-family:verdana, arial, helvetica, sans-serif;
-    color: #000;
-    font-size: 10px;
+    font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+    color: #333333;
+    font-size: 12px;
     font-weight: bold;
 }
 
 h1 {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 23px;
     margin-bottom: 18px;
 }
@@ -51,18 +52,22 @@ p {
 
 a {
     color: #66ccff;
-    font-size: 10px;   
+    font-size: 12px;   
 }
 
 pre {
     
 }
 
+/* firefox fix for images with borders */
 a img {
     border: none;
 }
 
 /* Infinite Carousel */
+ div#infinite_carousel {
+     overflow: hidden;
+ }
  
  div#infinite_carousel ul li a img {
      border: none;
@@ -107,6 +112,8 @@ ul#home-content li#twitter li {
     background-repeat: no-repeat;
     padding-left: 40px;
     margin: 15px 0;
+    font-size: 12px;
+    font-weight: normal;
 }
 
 ul#home-content li#twitter li:first-child {
@@ -115,6 +122,7 @@ ul#home-content li#twitter li:first-child {
 
 ul#home-content li#twitter li a {
     color: #6CF;
+    font-size:12px;
 }
 
 ul#home-content li#recent-posts ul li {

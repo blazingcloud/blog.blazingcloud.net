@@ -192,10 +192,8 @@
                     $('li:gt(' + (numImages - (dist + 1)) + ')', obj).clone(true).insertBefore($('li:first', obj)); // Copy rightmost (last) li and insert it after the first li
                     $('li:gt(' + (numImages - dist) + ')', obj).remove();
                     
-                    $('ul', obj).css({'left': ($('ul', obj).offset().left - $('li:first', obj).width()) + 'px'});
-                    var left = $('li:first', obj).width() - 746;
-                    
-                    $('ul', obj).animate({'left':left + 'px'}, o.transitionSpeed, o.easeRight, function() {
+                    $('ul', obj).css({'left': '-896px'});
+                    $('ul', obj).animate({'left':'0'}, o.transitionSpeed, o.easeRight, function() {
                         postMove();
                     });
                 }
