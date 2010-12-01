@@ -10,19 +10,19 @@ Template Name: Page Without a Title
     
     <div id="infinite_carousel">   
         <ul>
-            <li style="display: inline; float: left; "><a href="/programs/teen/jcc-maccabi-experience">
+            <li style="display: inline; float: left; "><a href="#">
                 <img src="<?php bloginfo('template_directory'); ?>/test2.png"></a>
             </li>
-            <li style="display: inline; float: left; "><a href="/programs/teen/jcc-maccabi-experience">
+            <li style="display: inline; float: left; "><a href="#">
                 <img src="<?php bloginfo('template_directory'); ?>/test2.png"></a>
             </li>
-            <li style="display: inline; float: left; "><a href="/programs/teen/jcc-maccabi-experience">
+            <li style="display: inline; float: left; "><a href="#">
                 <img src="<?php bloginfo('template_directory'); ?>/test2.png"></a>
             </li>
-            <li style="display: inline; float: left; "><a href="/programs/teen/jcc-maccabi-experience">
+            <li style="display: inline; float: left; "><a href="#">
                 <img src="<?php bloginfo('template_directory'); ?>/test2.png"></a>
             </li>
-            <li style="display: inline; float: left; "><a href="/programs/teen/jcc-maccabi-experience">
+            <li style="display: inline; float: left; "><a href="#">
                 <img src="<?php bloginfo('template_directory'); ?>/test2.png"></a>
             </li>
         </ul>
