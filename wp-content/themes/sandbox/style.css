@@ -5,7 +5,6 @@ body {
     margin: 0;
     background-image: url('assets/background.png');
     font-family:verdana, arial, helvetica, sans-serif;
-    font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
     color: #333333;
     font-size: 12px;
     font-weight: bold;
@@ -113,6 +112,7 @@ ul#home-content li#twitter li {
     padding-left: 40px;
     margin: 15px 0;
     font-size: 12px;
+    line-height: 14.4px;
     font-weight: normal;
 }
 
