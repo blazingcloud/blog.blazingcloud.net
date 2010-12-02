@@ -58,7 +58,7 @@
 
                 // Move rightmost image over to the left
                 $('ul', obj).width(9999);
-                $('ul', obj).offset({left: -540.5 })
+                $('ul', obj).css('left',-896 + 'px');
                 $('li:last', obj).prependTo($('ul', obj));
 
                 //build overlay div that is 200 px wide, 100% of height of the carousel, and append to both sides.
@@ -172,13 +172,14 @@
                         clearInterval(clearInt);
                     } // If running a contonuous show with no display time, fist clear the interval. Then below, recursively call moveLeft
 
+                    
                     $('li:lt(' + dist + ')', obj).clone(true).insertAfter($('li:last', obj)); // Copy the first image (offscreen to the left) to the end of the list (offscreen to the right)
                     $('li:lt(' + dist + ')', obj).remove();
 
                     //This sucks BUT we need to move the ul to zero (back to the right from a negative value) because we remove the item from the front of the
                     //list and append it to the back which puts the element in the correct spot. So no animation actually happens unless we move the list
                     //to the right first and animate left.
-                    $('ul', obj).offset({left: 355.5 })
+                    $('ul', obj).css('left', 0 + 'px');
                     $('ul', obj).animate({left:-896}, o.transitionSpeed, o.easeLeft, function() { // Animate the entire list to the left
                         postMove();
                         if (o.displayTime == 0) {
@@ -193,7 +194,7 @@
                     $('li:gt(' + (numImages - (dist + 1)) + ')', obj).clone(true).insertBefore($('li:first', obj)); // Copy rightmost (last) li and insert it after the first li
                     $('li:gt(' + (numImages - dist) + ')', obj).remove();
                     
-                    $('ul', obj).offset({left: -1344});
+                    $('ul', obj).css('left', -1792 + 'px');
                     $('ul', obj).animate({left: -896}, o.transitionSpeed, o.easeRight, function() {
                         postMove();
                         if (o.displayTime == 0) {
