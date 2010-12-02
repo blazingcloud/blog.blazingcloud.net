@@ -7,6 +7,27 @@ Page Without a Title
 <?php get_header() ?>
 
 <div id="content-wrapper">
+    
+    <?php $title = trim(get_the_title(the_ID())); if($title == "Portfolio") { ?> 
+
+    <div id="portfolio">
+        <ul>
+            <?php
+                $pages = get_pages('child_of='.$post->ID.'&sort_column=post_date&sort_order=desc'); 
+                $count = 0;
+                foreach ($pages as $page) : 
+            ?> 
+            <li class="<?php echo ($count % 2) ? left : right; ?>">
+                <?php echo $page->post_content; ?>
+            </li>                
+            <?php $count = $count + 1; ?>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+
+    <?php } else { ?>
+
+
     <div id="side-bar">  
         <?php
         #if this is a portfolio page or it is a child of the portfolio page
@@ -21,6 +42,8 @@ Page Without a Title
     </div><!-- side-bar -->
             
     <div id="main-content">
+    
+    
     
         <?php the_post() ?>
         <div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
@@ -46,6 +69,9 @@ Page Without a Title
         <?php if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
     
     </div> <!-- #main-content -->
+    
+    <?php } ?>
+    
 </div><!-- #content-wrapper -->
 
 <?php get_footer() ?>

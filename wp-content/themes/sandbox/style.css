@@ -60,86 +60,6 @@ a img {
     border: none;
 }
 
-/* Infinite Carousel */
- div#infinite_carousel {
-     overflow: hidden;
-     height: 303px;
- }
- 
- div#infinite_carousel ul {
-     overflow: hidden;
-     height: 303px;
- }
- 
- div#infinite_carousel ul li a img {
-     border: none;
- }
- 
- /* home page */
- 
- ul#home-content {
-     width: 896px;
-     height: 200px;
-     margin: 16px 0 0 0;
-     padding: 0;
-     list-style-type: none;
-     background: url('assets/home-slice.png') no-repeat;
- }
- 
- ul#home-content h1 {
-     margin: 10px 0 6px 0;
- }
- 
- ul#home-content ul {
-     padding: 0;
-     list-style-type: none;
- }
- 
-ul#home-content > li {
-     width: 33.3333%;
-     min-height: 200px;
-     display: block;
-     overflow: hidden;
-     float: left;
- }
- 
- ul#home-content li#twitter {
-    padding: 0;
-    margin: 0;
-}
-
-ul#home-content li#twitter li {
-    background-image:url("assets/twitter-icon.png");
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-    margin: 15px 0;
-    font-size: 12px;
-    line-height: 14.4px;
-    font-weight: normal;
-}
-
-ul#home-content li#twitter li:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-ul#home-content li#twitter li a {
-    color: #6CF;
-    font-size:12px;
-}
-
-ul#home-content li#recent-posts ul li {
-    background: url('assets/sidebar/list_image.png') no-repeat left center;
-    padding: 4px 20px 4px 15px;
-}
-
-ul#home-content li#recent-posts a {
-    color: #8AC974;
-    font-size: 12px;
-    text-decoration: none;
-}
-
 /* Main content structure */
 
 div#wrapper {
@@ -373,81 +293,142 @@ div#secondary >ul >li > h2 {
 
 }
 
-/* Portfolio */
-
-div#side-bar ul {
-    list-style-type: none;
+/* Infinite Carousel */
+ div#infinite_carousel {
+     overflow: hidden;
+     height: 303px;
+ }
+ 
+ div#infinite_carousel ul {
+     overflow: hidden;
+     height: 303px;
+ }
+ 
+ div#infinite_carousel ul li a img {
+     border: none;
+ }
+ 
+ /* home page */
+ 
+ ul#home-content {
+     width: 896px;
+     height: 200px;
+     margin: 16px 0 0 0;
+     padding: 0;
+     list-style-type: none;
+     background: url('assets/home-slice.png') no-repeat;
+ }
+ 
+ ul#home-content h1 {
+     margin: 10px 0 6px 0;
+ }
+ 
+ ul#home-content ul {
+     padding: 0;
+     list-style-type: none;
+ }
+ 
+ul#home-content > li {
+     width: 33.3333%;
+     min-height: 200px;
+     display: block;
+     overflow: hidden;
+     float: left;
+ }
+ 
+ ul#home-content li#twitter {
     padding: 0;
     margin: 0;
 }
 
-div#side-bar > div#primary > ul {
-} 
-
-div#side-bar ul.portfolio {
-    width: 256px;
+ul#home-content li#twitter li {
+    background-image:url("assets/twitter-icon.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    margin: 15px 0;
+    font-size: 12px;
+    line-height: 14.4px;
+    font-weight: normal;
 }
 
-div#side-bar ul.portfolio li {
+ul#home-content li#twitter li:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+ul#home-content li#twitter li a {
+    color: #6CF;
+    font-size:12px;
+}
+
+ul#home-content li#recent-posts ul li {
+    background: url('assets/sidebar/list_image.png') no-repeat left center;
+    padding: 4px 20px 4px 15px;
+}
+
+ul#home-content li#recent-posts a {
+    color: #8AC974;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Portfolio */
+
+div#portfolio {
+    width: 896px;
+    overflow: hidden;
+}
+
+div#portfolio ul {
     list-style-type: none;
-    height: 50px;
-    margin-bottom: 10px;
+    padding: 0;
 }
 
-div#side-bar ul.portfolio li a {
-    background: no-repeat left center;
-    font-weight: bold;
-    font-size: 14px;
-    height: 50px;
-    padding-left: 60px;
-    line-height: 50px;
-    display: block;
-    color: #66ccff;
+div#portfolio ul li {
+    margin: 10px 0;
+    padding: 20px 30px;
+    width: 836px;
+    overflow: hidden;
+    background: url('assets/home-slice.png') no-repeat bottom center;
 }
 
-div#side-bar ul.portfolio li:first-child {
-    margin-left: 0;
+div#portfolio ul li:last-child {
+    background: none;
+    padding-bottom: 0px;
 }
 
-div#side-bar ul.portfolio li a.jccsf {
-    background-image: url('assets/sidebar/jccsf.png');
+div#portfolio ul li p {
+    width: 418px;
 }
 
-div#side-bar ul.portfolio li a.metalingual {
-    background-image: url('assets/sidebar/metalingual.png');
+div#portfolio ul li.left > div {
+    float: left;
+    width: 418px;
 }
 
-div#side-bar ul.portfolio li a.mightysushi {
-    background-image: url('assets/sidebar/mightysushi.png');
+div#portfolio ul li.right > div {
+    float: right;
+    width: 418px;
 }
 
-div#side-bar ul.portfolio li a.gaze {
-    background-image: url('assets/sidebar/gaze.png');
+div#portfolio ul li h1 {
+    float: left;
+    width: 418px;
+    margin: 0 0 5px 0;
 }
 
-div#side-bar ul.portfolio li a.peerpressure {
-    background-image: url('assets/sidebar/peerpressure.png');
+div#portfolio ul li img {
+    vertical-align: top;
 }
 
-div#side-bar ul.portfolio li a.zigzagboard {
-    background-image: url('assets/sidebar/zigzagboard.png');
+div#portfolio ul li.right img {
+    float: left;
 }
 
-div#side-bar ul.portfolio li a.captainrecruiter {
-    background-image: url('assets/sidebar/captainrecruiter.png');
+div#portfolio ul li.left img {
+    float: right;
 }
-
-div#side-bar ul.portfolio li a:hover {
-    color: #fcbd5c;
-}
-
-div#side-bar ul.portfolio li a.current {
-    color: #fcbd5c;
-}
-
-div#side-bar div#tertiary h2 {
-    
-} 
 
 /* Blog */
 
