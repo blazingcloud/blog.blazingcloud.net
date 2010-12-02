@@ -57,8 +57,11 @@
                 $('li', obj).css({'display':'block','float':'left','margin':'0 75px'}).width("746px");
 
                 // Move rightmost image over to the left
+                console.log("original: " + $('ul', obj).offset().left);
+                $('ul', obj).width(9999);
+                $('ul', obj).offset({left: -540.5 })
                 $('li:last', obj).prependTo($('ul', obj));
-                $('ul', obj).css('left', '0').width(9999);
+                console.log("init: " + $('ul', obj).offset().left);
 
                 //build overlay div that is 200 px wide, 100% of height of the carousel, and append to both sides.
                 html = '<div id="overlayLeft" style="background:url(http://127.0.0.1/blazingcloud.net/wp-content/themes/sandbox/assets/carousel_btn_left.png) no-repeat left center; height:324px;position:absolute;left:10px;top:0px;bottom:0px;" onclick="javascript:void(0);"></div>';
@@ -130,11 +133,21 @@
                     }
                 }
 
-                function forcePrevNext(dir) {
+                function forcePrevNext(newDir) {
                     autopilot = 0;
                     status = 'pause';
                     clearTimeout(clearInt);
-                    (dir == 'prev') ? moveRight() : moveLeft();
+                    
+                    console.log("current offset: " + $('ul', obj).offset().left);
+                    
+                    if(newDir == 'prev') {
+                        console.log("prev: " + $('ul', obj).offset().left);
+                        moveRight();
+                    } else {
+                        console.log("next: " + $('ul', obj).offset().left);
+                        moveLeft();
+                    }
+                    console.log("final: " + $('ul', obj).offset().left);
                 }
 
                 function forcePause() {
@@ -154,14 +167,13 @@
                     }
                 }
 
-                function postMove() {
+                function postMove() {   
 
                     keyBind();
                     ary = [];
                     for (x = 1; x <= o.inView; x++) {
                         ary.push($('img:eq(' + x + ')', obj).attr('src'));
                     }
-                    $('#textholder' + randID + '_' + i + ' span').show();
                     for (i = 1; i <= o.inView; i++) showtext($('li:eq(' + i + ') p', obj).html(), i);
                 }
 
@@ -177,8 +189,8 @@
                     //This sucks BUT we need to move the ul to zero (back to the right from a negative value) because we remove the item from the front of the
                     //list and append it to the back which puts the element in the correct spot. So no animation actually happens unless we move the list
                     //to the right first and animate left.
-                    $('ul', obj).css({'left':'0'});
-                    $('ul', obj).animate({'left':'-896px'}, o.transitionSpeed, o.easeLeft, function() { // Animate the entire list to the left
+                    $('ul', obj).offset({left: 355.5 })
+                    $('ul', obj).animate({left:-896}, o.transitionSpeed, o.easeLeft, function() { // Animate the entire list to the left
                         postMove();
                         if (o.displayTime == 0) {
                             moveLeft();
@@ -192,9 +204,12 @@
                     $('li:gt(' + (numImages - (dist + 1)) + ')', obj).clone(true).insertBefore($('li:first', obj)); // Copy rightmost (last) li and insert it after the first li
                     $('li:gt(' + (numImages - dist) + ')', obj).remove();
                     
-                    $('ul', obj).css({'left': '-896px'});
-                    $('ul', obj).animate({'left':'0'}, o.transitionSpeed, o.easeRight, function() {
+                    $('ul', obj).offset({left: -896})
+                    $('ul', obj).animate({left: -896}, o.transitionSpeed, o.easeRight, function() {
                         postMove();
+                        if (o.displayTime == 0) {
+                            moveRight();
+                        }
                     });
                 }
 

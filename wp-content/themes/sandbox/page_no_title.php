@@ -11,13 +11,16 @@ Template Name: Page Without a Title
     <div id="infinite_carousel">   
         <ul>
             <li style="display: inline; float: left; "><a href="#">
-                <img src="<?php bloginfo('template_directory'); ?>/iPad_dev.png"></a>
-            </li>
-            <li style="display: inline; float: left; "><a href="#">
                 <img src="<?php bloginfo('template_directory'); ?>/iOS_Dev.png"></a>
             </li>
             <li style="display: inline; float: left; "><a href="#">
                 <img src="<?php bloginfo('template_directory'); ?>/web_dev.png"></a>
+            </li>
+            <li style="display: inline; float: left; "><a href="#">
+                <img src="<?php bloginfo('template_directory'); ?>/classes.png"></a>
+            </li>
+            <li style="display: inline; float: left; "><a href="#">
+                <img src="<?php bloginfo('template_directory'); ?>/iPad_dev.png"></a>
             </li>
         </ul>
     </div>
