@@ -193,7 +193,7 @@
                     $('li:gt(' + (numImages - (dist + 1)) + ')', obj).clone(true).insertBefore($('li:first', obj)); // Copy rightmost (last) li and insert it after the first li
                     $('li:gt(' + (numImages - dist) + ')', obj).remove();
                     
-                    $('ul', obj).offset({left: -896})
+                    $('ul', obj).offset({left: -1344});
                     $('ul', obj).animate({left: -896}, o.transitionSpeed, o.easeRight, function() {
                         postMove();
                         if (o.displayTime == 0) {
