@@ -57,11 +57,9 @@
                 $('li', obj).css({'display':'block','float':'left','margin':'0 75px'}).width("746px");
 
                 // Move rightmost image over to the left
-                console.log("original: " + $('ul', obj).offset().left);
                 $('ul', obj).width(9999);
                 $('ul', obj).offset({left: -540.5 })
                 $('li:last', obj).prependTo($('ul', obj));
-                console.log("init: " + $('ul', obj).offset().left);
 
                 //build overlay div that is 200 px wide, 100% of height of the carousel, and append to both sides.
                 html = '<div id="overlayLeft" style="background:url(http://127.0.0.1/blazingcloud.net/wp-content/themes/sandbox/assets/carousel_btn_left.png) no-repeat left center; height:324px;position:absolute;left:10px;top:0px;bottom:0px;" onclick="javascript:void(0);"></div>';
@@ -133,21 +131,12 @@
                     }
                 }
 
-                function forcePrevNext(newDir) {
+                function forcePrevNext(dir) {
                     autopilot = 0;
                     status = 'pause';
                     clearTimeout(clearInt);
-                    
-                    console.log("current offset: " + $('ul', obj).offset().left);
-                    
-                    if(newDir == 'prev') {
-                        console.log("prev: " + $('ul', obj).offset().left);
-                        moveRight();
-                    } else {
-                        console.log("next: " + $('ul', obj).offset().left);
-                        moveLeft();
-                    }
-                    console.log("final: " + $('ul', obj).offset().left);
+
+                    (dir == 'prev') ? moveRight() : moveLeft();
                 }
 
                 function forcePause() {
