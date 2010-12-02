@@ -42,7 +42,7 @@ Template Name: Page Without a Title
         </li>
         <li>
             <h1>Talks</h1>
-            <iframe src="http://player.vimeo.com/video/17357692" width="250" height="187.5" frameborder="0"></iframe>
+            <iframe src="http://player.vimeo.com/video/17357692" width="280" height="210" frameborder="0"></iframe>
         </li>
         <li id="twitter">
             <h1>Twitter</h1>
