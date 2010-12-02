@@ -17,7 +17,7 @@
            $('#infinite_carousel').infiniteCarousel({            
                transitionSpeed : 250,//how fast the slides move            
                displayTime : 6000, //how long before the slides move            
-               autoStart: false, //set to true if you want the infinite_carousel to start by default            
+               autoStart: true, //set to true if you want the infinite_carousel to start by default            
                textholderHeight : .2,            
                displayProgressBar : false, //set to true to display progress bar            
                displayThumbnails: false, //set to true to display thumbnails            
