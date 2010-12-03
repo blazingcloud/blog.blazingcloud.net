@@ -52,7 +52,7 @@
 
                 if (o.inView > numImages - 1) o.inView = numImages - 1; // check to make sure inview isnt greater than the number of images. inview should be at least two less than numimages (otherwise hinting wont work and animating left may catch a flash), but one less can work
                 $('p', obj).hide(); // Hide any text paragraphs in the carousel
-                $(obj).css({'position':'relative','overflow':'hidden', 'background' : 'url(http://127.0.0.1/blazingcloud.net/wp-content/themes/sandbox/assets/carousel_background.png) no-repeat', 'padding':'12px 0'}).width("896px"); //,'overflow':'hidden'
+                $(obj).css({'position':'relative','overflow':'hidden', 'background' : 'url(http://blazingcloud.net/wp-content/themes/sandbox/assets/carousel_background.png) no-repeat', 'padding':'12px 0'}).width("896px"); //,'overflow':'hidden'
                 $('ul', obj).css({'list-style':'none','margin':'0','padding':'0','position':'relative','overflow':'hidden'}).width("896px");
                 $('li', obj).css({'display':'block','float':'left','margin':'0 75px'}).width("746px");
 
@@ -62,8 +62,8 @@
                 $('li:last', obj).prependTo($('ul', obj));
 
                 //build overlay div that is 200 px wide, 100% of height of the carousel, and append to both sides.
-                html = '<div id="overlayLeft" style="background:url(http://127.0.0.1/blazingcloud.net/wp-content/themes/sandbox/assets/carousel_btn_left.png) no-repeat left center; height:324px;position:absolute;left:10px;top:0px;bottom:0px;" onclick="javascript:void(0);"></div>';
-                html += '<div id="overlayRight" style="background:url(http://127.0.0.1/blazingcloud.net/wp-content/themes/sandbox/assets/carousel_btn_right.png) no-repeat right center; height:324px;position:absolute;right:10px;top:0px;bottom:0px;" onclick="javascript:void(0);"></div>';
+                html = '<div id="overlayLeft" style="background:url(http://blazingcloud.net/wp-content/themes/sandbox/assets/carousel_btn_left.png) no-repeat left center; height:324px;position:absolute;left:10px;top:0px;bottom:0px;" onclick="javascript:void(0);"></div>';
+                html += '<div id="overlayRight" style="background:url(http://blazingcloud.net/wp-content/themes/sandbox/assets/carousel_btn_right.png) no-repeat right center; height:324px;position:absolute;right:10px;top:0px;bottom:0px;" onclick="javascript:void(0);"></div>';
                 $(obj).append(html);
 
                 $('#overlayLeft').width('65');
