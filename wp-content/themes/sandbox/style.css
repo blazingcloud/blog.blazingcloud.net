@@ -52,7 +52,16 @@ a {
 }
 
 pre {
-    
+    width: 612px;
+    word-wrap: break-word;
+}
+
+ol {
+    font-weight: normal;
+}
+
+ul {
+    font-weight: normal;
 }
 
 /* firefox fix for images with borders */
