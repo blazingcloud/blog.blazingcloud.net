@@ -1,7 +1,18 @@
 <?php get_header() ?>
-
-	<div id="container">
-		<div id="content">
+	<div id="content-wrapper">
+	<div id="side-bar">  
+        <?php
+        #if this is a portfolio page or it is a child of the portfolio page
+        if($post->post_title == "Portfolio") {
+            get_portfolio($post->ID);
+        } else if(trim(get_the_title($post->post_parent)) == "Portfolio") {
+            get_portfolio($post->post_parent);
+        } else {
+            get_sidebar();
+        }
+        ?>
+    </div><!-- side-bar -->
+    <div id="main-content">
 
 			<h2 class="page-title"><?php _e( 'Tag Archives:', 'sandbox' ) ?> <span><?php single_tag_title() ?></span></h2>
 
@@ -40,8 +51,7 @@
 				<div class="nav-next"><?php previous_posts_link( __( 'Next <span class="meta-nav">&raquo;</span>', 'sandbox' ) ) ?></div>
 			</div>
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+		</div><!-- #main-content -->
+	</div><!-- #content-wrapper -->
 
-<?php get_sidebar() ?>
 <?php get_footer() ?>

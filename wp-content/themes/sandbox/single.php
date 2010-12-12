@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
 <div id="content-wrapper">
-    <div id="side-bar">           
+    <div id="side-bar">       
         <?php get_sidebar() ?>
     </div><!-- side-bar -->
             
