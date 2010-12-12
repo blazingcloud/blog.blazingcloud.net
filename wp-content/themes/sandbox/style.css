@@ -267,7 +267,7 @@ div#navigation ul li a.blog:hover {
 
 div#side-bar {
     width: 256px;
-    padding-top: 60px;
+    padding-top: 31px;
     overflow: hidden;
 }
 
@@ -279,12 +279,12 @@ div#side-bar a {
 
 /* Primary Sidebar */
 
-div#primary ul {
+div#primary ul, div#secondary ul {
     padding-left: 17px;
     margin: 0;
 }
 
-div#primary > ul {
+div#primary > ul, div#secondary > ul {
     padding: 0;
 }
 
@@ -293,17 +293,17 @@ div#primary > ul li {
     margin: 3px 0 0 17px;
 }
 
-div#primary > ul > li {
+div#primary > ul > li, div#secondary > ul > li {
     list-style-type: none;
     list-style-image: none;
     margin: 0;
 }
-div#primary > ul > li h2.widgettitle{
+div#primary > ul > li h2.widgettitle, div#secondary > ul > li h2.widgettitle{
     margin-top:0;
 }
 
-div#secondary >ul >li > h2 {
-
+div#secondary > ul  {
+    margin-top: 10px;
 }
 
 /* Infinite Carousel */
