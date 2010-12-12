@@ -64,6 +64,10 @@ ul {
     font-weight: normal;
 }
 
+div {
+    font-weight: normal;
+}
+
 /* firefox fix for images with borders */
 a img {
     border: none;
