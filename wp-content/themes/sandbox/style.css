@@ -280,7 +280,7 @@ div#side-bar a {
 /* Primary Sidebar */
 
 div#primary ul, div#secondary ul {
-    padding-left: 17px;
+    padding-left: 0;
     margin: 0;
 }
 
