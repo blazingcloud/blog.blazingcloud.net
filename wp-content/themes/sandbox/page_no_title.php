@@ -20,7 +20,7 @@ Template Name: Page Without a Title
                 <img src="<?php bloginfo('template_directory'); ?>/web_dev.png"></a>
             </li>
             <li style="display: inline; float: left; "><a href="#">
-                <img src="<?php bloginfo('template_directory'); ?>/classes.png"></a>
+                <img src="<?php bloginfo('template_directory'); ?>/sarah-classes.png"></a>
             </li>
         </ul>
     </div>
