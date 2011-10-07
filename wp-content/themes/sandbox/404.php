@@ -23,7 +23,7 @@
 			</div><!-- .post -->
 
         <div id="footer">
-            <p>Copyright 2010, Blazing Cloud, Inc.</p>
+            <p>Copyright 2011, Blazing Cloud, Inc.</p>
         </div>
     </div> <!-- #main-content -->
 </div><!-- #content-wrapper -->
