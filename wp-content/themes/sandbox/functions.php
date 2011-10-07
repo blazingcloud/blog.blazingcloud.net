@@ -53,7 +53,7 @@ function blazingcloud_globalnav() {
 	$url = get_bloginfo('url');
 	$pages = array("Home" => $url, 
 	               "Portfolio" => $url . "/portfolio", 
-	               "Classes" => $url . "/classes", 
+	               "Classes" => $url . "/training", 
 	               "Cross Training" => $url . "/crosstrain", 
 	               "Contact Us" => $url . "/contact-us", 
 	               "Blog" => $url . "/blog");
