@@ -47,7 +47,7 @@ p {
 }
 
 a {
-    color: #66ccff;
+    color: #3235d1;
     font-size: 12px;   
 }
 
@@ -371,7 +371,7 @@ ul#home-content li#twitter li:first-child {
 }
 
 ul#home-content li#twitter li a {
-    color: #6CF;
+    color: #3235D1;
     font-size:12px;
 }
 
@@ -448,7 +448,7 @@ div#portfolio ul li.left img {
 h1.entry-title a {
     font-weight: bold;
     font-size: 16px;
-    color: #66ccff;
+    color: #3235D1;
     margin-top: 23px;
     margin-bottom: 18px;
 }
