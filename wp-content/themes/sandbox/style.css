@@ -47,7 +47,7 @@ p {
 }
 
 a {
-    color: #3235d1;
+    color: #000000;
     font-size: 12px;   
 }
 
@@ -371,7 +371,7 @@ ul#home-content li#twitter li:first-child {
 }
 
 ul#home-content li#twitter li a {
-    color: #3235D1;
+    color: #000000;
     font-size:12px;
 }
 
