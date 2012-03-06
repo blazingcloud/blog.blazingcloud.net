@@ -13,11 +13,12 @@ body {
    * - cjs
    */
 
-  font-size:1.8em;
+  font-size: 1.8em;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 0 auto;
   padding:0.5em;
+  
 }
 body p {
   font-size:1em;
@@ -26,9 +27,9 @@ body p {
 }
 
 /* 3 avalible title sizes */
-body h1 { font-size: 1.75em; font-variant:small-caps; }
+body h1 { font-size: 1.75em; font-variant:small-caps; font-weight:bold;}
 body h2 { font-size: 1.5em; }
-body h3 { font-size: 1.25em; }
+body h3 { font-size: 1.25em; font-weight:bold;}
 
 body em { font-style: italic; }
 
