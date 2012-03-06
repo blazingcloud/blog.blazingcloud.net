@@ -1,0 +1,11 @@
+body {
+  max-width: 480px; /* we default to landscape iphone */
+  font-size:1.8em;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Verdana';
+  margin: 0 auto;
+  padding:0.5em;
+}
+body p {
+  font-size:1em;
+  font-weight: 200;
+}
