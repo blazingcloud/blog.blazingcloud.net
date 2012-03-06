@@ -1,11 +1,26 @@
 body {
-  max-width: 480px; /* we default to landscape iphone */
+  max-width: 320px; /* we default to portrait iphone */
+
+  /* March 6th 2012 - Landscape/portrait
+   *
+   * there is a strange landscape/portrait issue 
+   * if we start at  480px -
+   * In portait mode the browser will scale to device width
+   * Changing the phone to landscape mode will enforce a zoom level
+   * without correct scale of the text in landscape mode (ios 5.0.1 9A405)
+   * - this is a known issuse - mozilla says they'll do it different :D
+   * - https://developer.mozilla.org/en/Mobile/Viewport_meta_tag#Viewport_basics
+   * - cjs
+   */
+
   font-size:1.8em;
-  font-family: 'Helvetica Neue', 'Helvetica', 'Verdana';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   margin: 0 auto;
   padding:0.5em;
 }
 body p {
   font-size:1em;
+  font-family: "HelveticaNeue-UltraLight",inherit;
   font-weight: 200;
 }
