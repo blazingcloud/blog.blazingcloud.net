@@ -24,3 +24,13 @@ body p {
   font-family: "HelveticaNeue-UltraLight", "Roboto-Thin", 'Roboto Thin',inherit;
   font-weight: 200;
 }
+
+/* 3 avalible title sizes */
+body h1 { font-size: 1.75em; font-variant:small-caps; }
+body h2 { font-size: 1.5em; }
+body h3 { font-size: 1.25em; }
+
+body em { font-style: italic; }
+
+body h1,body h2,body h3 { margin: 0.9em 0em 0.5em; }
+body p { margin: 1em 0.01em;}
