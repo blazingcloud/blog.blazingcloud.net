@@ -2,11 +2,15 @@
 <html>
   <head>
     <title>Responsive Design Starts with Mobile First</title>
-    <link rel='stylesheet' href='grid.css'/>
+    <link rel='stylesheet' href='reset.css'/>
+    <link rel='stylesheet' href='font.css'/>
     <link rel='stylesheet' href='r.css'/>
     <!-- tell devices like iphone not to think it is 980px -->
-     <meta name="viewport" content="initial-scale=1.0,
-       width=device-width" />
+     <meta name="viewport" content="initial-scale=1.0 width=device-width" />
+    <!-- 
+     maximum-scale=1.0 can be used for the viewport - it will prevent the
+    iphone landscape / portrait bug from occuring - but will not allow zooming in
+    to look at the pretty font - or perhaps to make the text larger -->
   </head>
   <body>
     <header>
@@ -15,7 +19,7 @@
     <section class='stories'>
       
     <section class='brand story'>
-      <img src='candle.jpg'/>
+      <img src='candle.jpg' alt='A flickering candle'/>
     </section>
     <article class='story'>
     On a frigid and snowy winter day Mullah Nasruddin was having a chat with some of his friends in the local coffee house. Mullah Nasruddin said that cold weather did not bother him, and in fact, he could stay, if necessary, all night without any heat.
@@ -82,9 +86,9 @@ There was a lighted candle under the cauldron.
       <section>Mullah, Nasrudin Hoja appears as the whimsical character in a growing tradition of stories. The tales of Nasrudin are sometimes adapted and used as teaching stories. </section>
     </section>
     <section class='colophon'>
-      <section> Android - Ice Cream Sandwich : Robotron </section>
-      <section> Mac, iPhone - Webkit : Helvetica Neue Ultra Light, Helvetica Neue Light </section>
-      <section> Other - Arial, Sans-Serif </section>
+      <section> Roboto-Thin : story text </section>
+      <section> Roboto-Condensed-Bold : title </section>
+      <section> Raleway-Thin : colophon and other sections </section>
       <section> so long and thanks for all the fish </section>
     </section>
     </section>
