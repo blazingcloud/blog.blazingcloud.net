@@ -20,12 +20,35 @@ body {
   padding:0.5em;
   
 }
-body p {
+body .stories { /* column */
+  float:left;
+}
+
+body .story { margin: 1em 0.01em;}
+body .story {
   font-size:1em;
   font-family: "HelveticaNeue-UltraLight", "Roboto-Thin", 'Roboto Thin',inherit;
   font-weight: 200;
+  
 }
 
+body .side { /* column */
+  float:right;
+}
+
+body .about {
+  border: 4px groove #ADADAD;
+  padding:  0 1em;
+}
+body section section {
+  margin: 1em 0;
+}
+
+body .colophon {
+  background:#181818;
+  color:#FdFdFd;
+  padding:1em;
+}
 /* 3 avalible title sizes */
 body h1 { font-size: 1.75em; font-variant:small-caps; font-weight:bold;}
 body h2 { font-size: 1.5em; }
@@ -34,4 +57,46 @@ body h3 { font-size: 1.25em; font-weight:bold;}
 body em { font-style: italic; }
 
 body h1,body h2,body h3 { margin: 0.9em 0em 0.5em; }
-body p { margin: 1em 0.01em;}
+
+@media screen and (min-width:768px) and (max-width:960px){
+  /* iPad */
+  
+    body {
+      font-size:1.2em;
+      max-width:768px;
+    }
+    .stories {
+      max-width:60%;
+    }
+    .story {
+      width:50%;
+      float:left;
+    }
+    .side {
+      width:30%;
+    }
+}
+
+@media screen and (min-width:960px) {
+  /* monitor -- the biggest one */ 
+    body {
+      min-width:960px;
+      max-width:2000px;
+      font-size:1em;
+    }
+    
+    .stories {
+      width:83.33333%;
+    }
+    .story {
+      width:20%;
+      float:left;
+    }
+    .brand img {
+      width:80%; /* have 20% of the column to fit in - so image is 80% of it's actual size */
+    }
+    
+    .side {
+      width:16.66666%;
+    }
+}
