@@ -1,0 +1,37 @@
+@media screen and (min-width:860px) {
+  /* monitor -- the biggest one */ 
+    body {
+      /* 
+       * at each  level our media queries need
+       * to redeclar any previous level if there
+       * are overlaps in the matches
+       *
+       *
+       */
+      min-width:860px;
+     /* max-width:9999px;  */
+      font-size:1em;
+    }
+    
+    .stories {
+      max-width:83.33333%;
+    }
+    .story {
+      width:20%;
+      float:left;
+    }
+    .brand img {
+      /* 
+       *
+       * By bounding width we have a basic shape that
+       * the image will not fall below - It can get bigger
+       *
+       */
+      width:80%;     /* have 20% of the column to fit in - so image is 80% of it's actual size */
+    }
+    
+    .side {
+      width:16.66666%;
+    }
+}
+

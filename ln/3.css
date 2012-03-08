@@ -1,0 +1,18 @@
+body {
+  /*background: url(320.png) no-repeat;*/
+  height:1000px; /* devmode */
+  width:20em; /* 16px * 20 = 320px */
+  margin:1em; /* 16px * 1  = 16px  */
+}
+header {
+  height: 3.75em; /* 16 * 3.75 = 60px */
+}
+nav {
+  height: 5.625em; /* 16 * 5.625 = 90px */
+}
+.brand {
+  text-align:center;
+  font-size:1.4em;
+  margin:1em;
+  font-family:sans-serif;
+}
