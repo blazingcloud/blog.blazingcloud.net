@@ -1,8 +1,8 @@
 body {
-  /*background: url(320.png) no-repeat;*/
+  background: url(320.png) no-repeat;
   height:1000px; /* devmode */
   width:20em; /* 16px * 20 = 320px */
-  margin:1em; /* 16px * 1  = 16px  */
+  margin:0; /* 16px * 1  = 16px  */
 }
 header {
   height: 3.75em; /* 16 * 3.75 = 60px */
@@ -11,8 +11,25 @@ nav {
   height: 5.625em; /* 16 * 5.625 = 90px */
 }
 .brand {
-  text-align:center;
-  font-size:1.4em;
-  margin:1em;
+  height: 18.5em; /* 16px * 18.5 = 296, but when I type 18.5em, it makes it 399px??? */
+  /* background-color: #A4CCDB; /* 164 204 219 */
+  /* font-size: 1.4em;
   font-family:sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 1em 1em; */
+}
+
+  /* experiments
+   .brand h1 {
+  margin: 0 1em;
+  text-align:center;
+  font-size:1.35em;
+  font-family:sans-serif;
+  font-weight: bold;
+}
+  */
+
+.about {
+  height: 
 }
