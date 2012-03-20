@@ -11,6 +11,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  <link href="<?php bloginfo('stylesheet_url') ?>" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="<?php bz_assets() ?>/reset.css">
   <link rel="stylesheet" href="<?php bz_assets() ?>/fonts.css">
   

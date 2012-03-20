@@ -1,6 +1,5 @@
 <?php get_header() ?>
 
-<div id="content-wrapper">
     <div id="side-bar">       
         <?php get_sidebar() ?>
     </div><!-- side-bar -->
@@ -55,6 +54,5 @@
 
 <?php comments_template() ?>
     </div> <!-- #main-content -->
-</div><!-- #content-wrapper -->
 
 <?php get_footer() ?>
