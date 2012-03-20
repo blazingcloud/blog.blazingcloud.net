@@ -5,6 +5,8 @@
 	<meta name="google-site-verification" content="ZaAMis_-Ko3ZGTciJvbTeioaGsLkowQTR1SSkeMYJuE" />
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<link href="<?php bloginfo('stylesheet_url') ?>" rel="stylesheet" type="text/css" /> 
+  <link href="<?php bloginfo('stylesheet_directory') ?>/fonts.css" rel="stylesheet" type="text/css" /> 
+  <link href="<?php bloginfo('stylesheet_directory') ?>/blog.css" rel="stylesheet" type="text/css" /> 
 <?php wp_head() // For plugins ?>
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php printf( __( '%s latest posts', 'sandbox' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'sandbox' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
@@ -57,9 +59,4 @@
        <a href="<?php bloginfo('url'); ?>">
            <img src="<?php bloginfo('stylesheet_directory')?>/assets/header/blazing_cloud_logo.png" alt="Blazing Cloud Logo"/>
        </a>
-       <!--
-       <div id="navigation">
-            <?php //blazingcloud_globalnav() ?>
-       </div>
-       -->
      </div>
