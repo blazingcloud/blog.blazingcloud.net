@@ -118,20 +118,14 @@ div#footer {
 }
 
 div#footer a {
-   color: white;
    text-decoration: none;
-}
-
-div#footer a:hover {
-    color: #666666;
 }
 
 div#footer-content {
     width: 896px;
     height: 20px;
-    background-color: #FFA434;
-    color: white;
     text-align: center;
+    color: black;
     font-size: 14px;
     margin: 0 36px;
     padding: 5px 0;
@@ -184,7 +178,6 @@ div#navigation ul li a {
 
 div#footer p {
     margin: 0;
-    color: #fffde9; 
     line-height: 20px;    
 }
 
@@ -449,7 +442,6 @@ div#portfolio ul li.left img {
 h1.entry-title a {
     font-weight: bold;
     font-size: 18px;
-    color: #3235D1;
     margin-top: 23px;
     margin-bottom: 18px;
 }
