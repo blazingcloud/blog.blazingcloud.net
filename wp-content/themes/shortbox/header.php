@@ -56,7 +56,7 @@
 
 <div id="wrapper">
     <div id="header">
-       <a href="http://www.blazingcloud.net">
+       <a href="http://blazingcloud.net">
            <img src="<?php bloginfo('stylesheet_directory')?>/assets/header/blazing_cloud_logo.png" alt="Blazing Cloud Logo"/>
        </a>
      </div>
