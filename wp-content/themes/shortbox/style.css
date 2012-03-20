@@ -141,8 +141,8 @@ div#bottom-border-slice {
 
 div#header > a > img {
     border: none; 
-    width: 256px;
-    height: 70px;
+    width: auto;
+    height: auto;
 }
 
 div#navigation {
