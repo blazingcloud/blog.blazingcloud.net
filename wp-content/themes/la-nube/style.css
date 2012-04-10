@@ -1,0 +1,12 @@
+/* color */
+
+
+a { color: rgb(226,143,86);}
+a:hover  { color: rgb(226,143,86); }
+a.active { color: rgb(124,63,9); text-decoration:underline; }	
+
+.widget_recent_entries a,
+.entry .title {
+  color:#000000;
+}
+
