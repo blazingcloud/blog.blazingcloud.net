@@ -1,15 +1,12 @@
 <?php get_header() ?>
-<div id="content-wrapper">
-    <div id="side-bar">           
-        <?php get_sidebar() ?>
-    </div><!-- side-bar -->
+<div id="content-wrapper blog">
             
     <div id="main-content">
 
-			<div id="nav-above" class="navigation">
-				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Previous', 'sandbox' )) ?></div>
-				<div class="nav-next"><?php previous_posts_link(__( 'Next <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
-			</div>
+			<nav id="nav-above" class="navigation">
+				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&lt;</span> Previous', 'sandbox' )) ?></div>
+				<div class="nav-next"><?php previous_posts_link(__( 'Next <span class="meta-nav">&gt;</span>', 'sandbox' )) ?></div>
+			</nav>
 
 <?php while ( have_posts() ) : the_post() ?>
 
@@ -35,11 +32,14 @@
 <?php comments_template() ?>
 
 <?php endwhile; ?>
+    <aside id="side-bar">           
+        <?php get_sidebar() ?>
+    </aside><!-- side-bar -->
 
-			<div id="nav-below" class="navigation">
-				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Previous', 'sandbox' )) ?></div>
-				<div class="nav-next"><?php previous_posts_link(__( 'Next <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
-			</div>
+			<nav id="nav-below" class="navigation">
+				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&lt;</span> Previous', 'sandbox' )) ?></div>
+				<div class="nav-next"><?php previous_posts_link(__( 'Next <span class="meta-nav">&gt;</span>', 'sandbox' )) ?></div>
+			</nav>
     </div> <!-- #main-content -->
 </div><!-- #content-wrapper -->
 
