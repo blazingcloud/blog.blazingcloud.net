@@ -35,8 +35,8 @@
 					<span class="comments-link"><?php comments_popup_link( __( 'Comments (0)', 'sandbox' ), __( 'Comments (1)', 'sandbox' ), __( 'Comments (%)', 'sandbox' ) ) ?></span>
 				</div>
 			<nav id="nav-below" class="archives">
-				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&lt;</span> Previous', 'sandbox' )) ?></div>
-				<div class="nav-next"><?php previous_posts_link(__( 'Next <span class="meta-nav">&gt;</span>', 'sandbox' )) ?></div>
+				<div class="nav-previous"><?php next_post_link(__( '<span class="meta-nav">&lt;</span> Previous', 'sandbox' )) ?></div>
+				<div class="nav-next"><?php previous_post_link(__( 'Next <span class="meta-nav">&gt;</span>', 'sandbox' )) ?></div>
 			</nav>
        <?php comments_template() ?>
 			</div><!-- .post -->
