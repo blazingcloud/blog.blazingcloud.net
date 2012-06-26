@@ -34,8 +34,8 @@
 
 
 	<link href="<?php bloginfo('stylesheet_url') ?>" rel="stylesheet" type="text/css" /> 
-  <link href="<?php bloginfo('stylesheet_directory') ?>/blog.css" rel="stylesheet" type="text/css" /> 
   <link href="<?php bloginfo('stylesheet_directory') ?>/fonts.css" rel="stylesheet" type="text/css" /> 
+  <link href="<?php bloginfo('stylesheet_directory') ?>/blog.css" rel="stylesheet" type="text/css" /> 
 
 
 <?php wp_head() // For plugins ?>

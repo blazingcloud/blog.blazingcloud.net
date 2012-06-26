@@ -4,12 +4,26 @@ body {
   color:rgb(50,50,50);
   width:100%;
 }
+
 body .blog {
   margin-left:4em;
+  1em;
 }
-.entry .content {
+.introduction {
+  margin-top:4em;
+  margin-bottom:2.5em;
+}
+.introduction h1 {
+  font-family: PTSansNarrowRegular;
+  font-size:1.75em
+}
+.entry .content , .entry p, .entry li {
   margin-top:2em;
   margin-bottom:2em;
+  margin-right:2em;
+}
+.entry li {
+  margin-left:0.25em
 }
 
 .entry .meta * {
@@ -19,6 +33,7 @@ body .blog {
 .widget_recent_entries a,
 .entry .title {
   font-family: PTSansNarrowBold;
+  font-weight:bold;
   display:block;
   font-size:1.875em;
   text-decoration:none;
