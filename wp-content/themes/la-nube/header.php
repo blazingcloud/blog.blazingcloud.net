@@ -15,24 +15,20 @@
           href="<?php bloginfo('stylesheet_directory') ?>/responsive/base.css">
     <!-- small devices -->
     <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/base-small.css"  
-          media='screen and (min-width:20em) and (max-width:48em) ' />
+          href="<?php bloginfo('stylesheet_directory') ?>/responsive/320px_to_767px.css"  
+          media='screen and (min-width:320px) and (max-width:767px) ' />
     <!-- small landscape device -->
     <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/small/landscape.css"  
-          media='screen and (min-width:30em) and (max-width:48em) ' />
+          href="<?php bloginfo('stylesheet_directory') ?>/responsive/small/320px_to_480px.css"  
+          media='screen and (min-width:320px) and (max-width:480px) ' />
     <!-- wide devices -->
     <link rel="stylesheet" 
           href="<?php bloginfo('stylesheet_directory') ?>/responsive/768px_or_wider.css"  
           media='screen and (min-width:768px)' />
     <!-- wide tablet device -->
     <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/wide/tablet.css"  
-          media='screen and (min-width:48em) and (max-width:64em)' />
-    <!-- wide desktop device -->
-    <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/wide/desktop.css" 
-          media='screen and (min-width:64em)' />
+          href="<?php bloginfo('stylesheet_directory') ?>/responsive/wide/768px_to_1024px.css"  
+          media='screen and (min-width:768px) and (max-width:1024px)' />
 
 
 

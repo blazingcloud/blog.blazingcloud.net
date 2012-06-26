@@ -1,3 +1,16 @@
+#wrapper {
+  width:1000px;
+}
+
+.grid .tile {
+  width:74%;
+}
+.grid aside.tile {
+  width:23%;
+  overflow:hidden;
+  zoom:1;
+}
+
 div.nav {
   position: absolute;
   right: 14%;
