@@ -41,4 +41,37 @@ code, pre {
   margin:0px auto;
 }
 
+ul {
+  list-style: none;
+}
+
+div.nav {
+  margin:0 auto;
+  padding-left:16px;
+  padding-right:20px;
+  padding-bottom:22px;
+  padding-top:22px;
+  z-index:9999;
+}
+
+div.nav li {
+  float: left;
+  margin: 0 13px 0 0;
+}
+
+div.nav li a {
+  display: block;
+  width: inherit;
+  font-size:14.5px;
+  font-family: PTSansNarrowBold;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+div.nav li a.active {
+    border-bottom: 1px solid #7C3F09;
+    color: #7C3F09;
+    height: 17px;
+}
+
 

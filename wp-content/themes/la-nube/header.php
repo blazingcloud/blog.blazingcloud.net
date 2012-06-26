@@ -23,8 +23,8 @@
           media='screen and (min-width:30em) and (max-width:48em) ' />
     <!-- wide devices -->
     <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/base-wide.css"  
-          media='screen and (min-width:48em)' />
+          href="<?php bloginfo('stylesheet_directory') ?>/responsive/768px_or_wider.css"  
+          media='screen and (min-width:768px)' />
     <!-- wide tablet device -->
     <link rel="stylesheet" 
           href="<?php bloginfo('stylesheet_directory') ?>/responsive/wide/tablet.css"  
@@ -70,4 +70,12 @@
        <a href="http://blazingcloud.net">
            <img src="<?php bloginfo('stylesheet_directory')?>/assets/header/blazing_cloud_logo.png" alt="Blazing Cloud Logo"/>
        </a>
-     </div>
+       <div class="nav">
+         <ul>
+          <li><a href="http://blazingcloud.net/">Home</a></li>
+          <li><a href="http://blazingcloud.net/services">Services</a></li>
+          <li><a class= "active" href='http://blog.blazingcloud.net/'>Blog</a></li>
+         </ul>
+       </div>
+    
+    </div>

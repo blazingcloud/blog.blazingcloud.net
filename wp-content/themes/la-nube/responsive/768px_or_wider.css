@@ -1,0 +1,10 @@
+div.nav {
+  position: absolute;
+  right: 14%;
+  top: 1px;
+  letter-spacing: 1px;
+}
+
+div#header, div#blog, div#footer {
+  max-width: 1024px;
+}
