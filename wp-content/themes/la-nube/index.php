@@ -1,6 +1,9 @@
 <?php get_header() ?>
 <div class="blog">
-            
+    <section class='introduction'>
+      <h1> OUR BLOG</h1>
+      <p>Thoughts on strategy, design, development and the world we live in</p>
+    </section>
     <div id="main-content" class='grid'>
 
 
