@@ -1,5 +1,6 @@
 <?php get_header() ?>
-<div class="blog">
+
+<div id="content-wrapper">
     <section class='introduction'>
       <h1> OUR BLOG</h1>
       <p>Thoughts on strategy, design, development and the world we live in</p>
@@ -48,7 +49,7 @@
 
     <aside id="side-bar" class='tile'>           
         <?php get_sidebar() ?>
-    </aside><!-- side-bar -->
+    </aside><!-- #side-bar -->
 
     </div> <!-- #main-content -->
 </div><!-- #content-wrapper -->

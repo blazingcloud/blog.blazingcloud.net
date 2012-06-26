@@ -1,5 +1,10 @@
-#wrapper {
-  width:1000px;
+div#wrapper {
+  width:1024px;
+  overflow:hidden;
+}
+
+div#header, div#content-wrapper, div#footer {
+  max-width: 1024px;
 }
 
 .grid .tile {
@@ -11,13 +16,3 @@
   zoom:1;
 }
 
-div.nav {
-  position: absolute;
-  right: 14%;
-  top: 1px;
-  letter-spacing: 1px;
-}
-
-div#header, div#blog, div#footer {
-  max-width: 1024px;
-}
