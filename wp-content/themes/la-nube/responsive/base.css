@@ -54,13 +54,25 @@ div#wrapper {
   margin:0px auto;
 }
 
+div#header{
+  width:100%;
+}
+
 div#wrapper div#header {
   overflow: hidden;
 }
 
 div#header a.logo {
-  float:left;
+  float: left;
+  width:70%;
 }
+
+
+div#header ul#nav li a {
+  display: inline;
+}
+
+
 
 div#header ul#nav {
   margin:0 auto;
@@ -73,9 +85,13 @@ div#header ul#nav {
   letter-spacing: 1px;
 }
 
+
 div#header ul#nav li {
-  float:right;
-  margin: 0 13px 0 0;
+  float:left;
+  display: inline;
+  margin:0 13px 0 0;
+  padding: 22px 0 22px 0;
+  
 }
 
 div#header ul#nav li a {

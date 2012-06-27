@@ -63,8 +63,8 @@
       <img src="<?php bloginfo('stylesheet_directory')?>/assets/header/blazing_cloud_logo.png" alt="Blazing Cloud Logo"/>
       </a>
     <ul id="nav">
-      <li><a class= "active" href='http://blog.blazingcloud.net/'>Blog</a></li>
-      <li><a href="http://blazingcloud.net/services">Services</a></li>
       <li><a href="http://blazingcloud.net/">Home</a></li>
+      <li><a href="http://blazingcloud.net/services">Services</a></li>
+      <li><a class= "active" href='http://blog.blazingcloud.net/'>Blog</a></li>
     </ul>
   </div>

@@ -1,10 +1,10 @@
 div#wrapper {
-  width:1024px;
+  max-width:1024px;
   overflow:hidden;
 }
 
 div#header, div#content-wrapper, div#footer {
-  max-width: 1024px;
+  width: 100%;
 }
 
 .grid .tile {

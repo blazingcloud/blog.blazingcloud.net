@@ -1,0 +1,29 @@
+div#wrapper {
+	max-width: 767px;
+}
+
+div#header a.logo, div#header ul#nav {
+	float:none;
+	text-align:center;
+}
+
+div#header ul#nav li {
+	float:none;
+	display: inline;	
+	padding: 0px;
+	margin: 0px;
+}
+
+div#header ul#nav li a {
+	display: inline;
+}
+
+div#header a.logo {
+	display: block;
+	width: 100%;
+}
+
+div#header a.logo img {
+	width: 349px;
+  margin: 0px auto;
+}
