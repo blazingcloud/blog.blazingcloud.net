@@ -1,18 +1,30 @@
 div#wrapper {
-  max-width:1024px;
+  max-width:1093px;
   overflow:hidden;
 }
 
 div#header, div#content-wrapper, div#footer {
   width: 100%;
+  overflow: hidden;
+}
+
+div#header a.logo{
+	width:70%
+}
+
+div#header ul#nav{
+	width: 26%;
+	padding: 22px 0;
 }
 
 .grid .tile {
-  width:74%;
+  width: 63%;
+  overflow: hidden;
 }
 .grid aside.tile {
-  width:23%;
-  overflow:hidden;
-  zoom:1;
+  width: 26%;
+  overflow: hidden;
+  zoom: 1;
+  margin-left: 3%;
 }
 

@@ -3,15 +3,16 @@ body {
   background: url('assets/wheat.png');
   color:rgb(50,50,50);
   width:100%;
+  margin-top:0;
 }
 
 body #content-wrapper {
-  margin-left:4em;
+  margin-left:61px;
   overflow:hidden;
 }
 .introduction {
-  margin-top:4em;
-  margin-bottom:2.5em;
+  margin-top:51px;
+  margin-bottom:37px;
 }
 .introduction h1 {
   font-family: PTSansNarrowRegular;

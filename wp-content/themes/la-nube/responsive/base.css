@@ -35,7 +35,7 @@ audio, video {
 }
 
 img {
-  margin: 20px 0;
+  margin:0;
 }
 
 code, pre {
@@ -50,12 +50,17 @@ a {
   text-decoration: none;
 }
 
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
 div#wrapper {
-  margin:0px auto;
+  margin: 0px auto;
 }
 
 div#header{
-  width:100%;
+  width: 100%;
 }
 
 div#wrapper div#header {
@@ -64,7 +69,7 @@ div#wrapper div#header {
 
 div#header a.logo {
   float: left;
-  width:70%;
+  width: 79%;
 }
 
 
@@ -72,12 +77,10 @@ div#header ul#nav li a {
   display: inline;
 }
 
-
-
 div#header ul#nav {
   margin:0 auto;
-  padding-left:16px;
-  padding-right:20px;
+  padding-left:12%;
+  padding-right:12px;
   padding-bottom:22px;
   padding-top:22px;
   z-index:9999;
@@ -89,9 +92,7 @@ div#header ul#nav {
 div#header ul#nav li {
   float:left;
   display: inline;
-  margin:0 13px 0 0;
-  padding: 22px 0 22px 0;
-  
+  margin:0 16px 0 0;
 }
 
 div#header ul#nav li a {
@@ -109,4 +110,7 @@ div#header ul#nav li a.active {
     height: 17px;
 }
 
-
+.grid{
+	clear: both;
+	overflow:hidden;
+}

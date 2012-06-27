@@ -7,6 +7,10 @@ div#header a.logo, div#header ul#nav {
 	text-align:center;
 }
 
+div#header ul#nav {
+	padding-left: 3%;
+}
+
 div#header ul#nav li {
 	float:none;
 	display: inline;	
