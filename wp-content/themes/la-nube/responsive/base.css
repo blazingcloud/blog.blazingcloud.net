@@ -34,10 +34,6 @@ audio, video {
   font-weight: normal;
 }
 
-img {
-  margin: 20px 0;
-}
-
 code, pre {
   font-family:courier;
 }
@@ -50,48 +46,38 @@ a {
   text-decoration: none;
 }
 
+/*  Page Architecture */ 
+
 div#wrapper {
   margin:0px auto;
 }
 
-div#header{
-  width:100%;
-}
-
 div#wrapper div#header {
+  width:100%;
   overflow: hidden;
 }
 
 div#header a.logo {
-  float: left;
   width:70%;
+  float: left;
 }
-
-
-div#header ul#nav li a {
-  display: inline;
-}
-
-
 
 div#header ul#nav {
+  overflow: hidden;
   margin:0 auto;
   padding-left:16px;
   padding-right:20px;
   padding-bottom:22px;
   padding-top:22px;
   z-index:9999;
-  overflow: hidden;
   letter-spacing: 1px;
 }
 
-
 div#header ul#nav li {
-  float:left;
   display: inline;
+  float:left;
   margin:0 13px 0 0;
   padding: 22px 0 22px 0;
-  
 }
 
 div#header ul#nav li a {
@@ -104,9 +90,28 @@ div#header ul#nav li a {
 }
 
 div#header ul#nav li a.active {
-    border-bottom: 1px solid #7C3F09;
-    color: #7C3F09;
-    height: 17px;
+  height: 17px;
+  border-bottom: 1px solid #7C3F09;
+  color: #7C3F09;
 }
 
+div#wrapper div#content-wrapper {
+  width: 94.04%;
+  overflow: hidden; 
+}
 
+div#content-wrapper div#blog-tile {
+  width: 100%;
+  overflow: hidden;
+}
+
+div#content-wrapper div#main-content {
+  width: 72.59%;
+  overflow: hidden;
+  float: left;
+}
+
+div#content-wrapper div#side-bar {
+  width: 27.41%;
+  float: left;
+}

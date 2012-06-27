@@ -6,7 +6,7 @@ body {
 }
 
 body #content-wrapper {
-  margin-left:4em;
+  padding-left: 61px;
   overflow:hidden;
 }
 .introduction {
