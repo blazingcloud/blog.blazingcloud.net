@@ -1,12 +1,11 @@
 <?php get_header() ?>
 
 <div id="content-wrapper">
-    <section class='introduction'>
-      <h1> OUR BLOG</h1>
+    <div id='blog-title'>
+      <h1>OUR BLOG</h1>
       <p>Thoughts on strategy, design, development and the world we live in</p>
-    </section>
+    </div>
     <div id="main-content" class='grid'>
-
 
 <?php  the_post() ?>
 
@@ -39,19 +38,18 @@
 <?php edit_post_link( __( 'Edit', 'sandbox' ), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n" ) ?>
 					<span class="comments-link"><?php comments_popup_link( __( 'Comments (0)', 'sandbox' ), __( 'Comments (1)', 'sandbox' ), __( 'Comments (%)', 'sandbox' ) ) ?></span>
 				</div>
-			<nav id="nav-below" class="archives">
-				<div class="nav-previous"><?php previous_post_link('%link',__( '<span class="meta-nav">&lt;</span> Previous', 'sandbox' ),TRUE) ?></div>
-				<div class="nav-next"><?php next_post_link('%link',__( 'Next <span class="meta-nav">&gt;</span>', 'sandbox' ),TRUE) ?></div>
-			</nav>
        <?php comments_template() ?>
 			</div><!-- .post -->
-
-
-    <aside id="side-bar" class='tile'>           
-        <?php get_sidebar() ?>
-    </aside><!-- #side-bar -->
-
+    	<div id="nav-below" class="archives">
+				<div class="nav-previous"><?php previous_post_link('%link',__( '<span class="meta-nav">&lt;</span> Previous', 'sandbox' ),TRUE) ?></div>
+				<div class="nav-next"><?php next_post_link('%link',__( 'Next <span class="meta-nav">&gt;</span>', 'sandbox' ),TRUE) ?></div>
+			</div>
     </div> <!-- #main-content -->
+
+	<div id="side-bar" class='tile'>           
+	    <?php get_sidebar() ?>
+	</div><!-- #side-bar -->
+
 </div><!-- #content-wrapper -->
 
 <?php get_footer() ?>

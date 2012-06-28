@@ -50,49 +50,38 @@ a {
   text-decoration: none;
 }
 
-body{
-	margin: 0px;
-	padding: 0px;
-}
+/*  Page Architecture */ 
 
 div#wrapper {
   margin: 0px auto;
 }
 
-div#header{
-  width: 100%;
-}
-
 div#wrapper div#header {
+  width:100%;
   overflow: hidden;
 }
 
 div#header a.logo {
+  width: 70%;
   float: left;
-  width: 79%;
-}
-
-
-div#header ul#nav li a {
-  display: inline;
 }
 
 div#header ul#nav {
+  overflow: hidden;
   margin:0 auto;
-  padding-left:12%;
-  padding-right:12px;
+  padding-left:16px;
+  padding-right:20px;
   padding-bottom:22px;
   padding-top:22px;
   z-index:9999;
-  overflow: hidden;
   letter-spacing: 1px;
 }
 
-
 div#header ul#nav li {
-  float:left;
   display: inline;
-  margin:0 16px 0 0;
+  float:left;
+  margin:0 13px 0 0;
+  padding: 22px 0 22px 0;
 }
 
 div#header ul#nav li a {
@@ -105,12 +94,42 @@ div#header ul#nav li a {
 }
 
 div#header ul#nav li a.active {
-    border-bottom: 1px solid #7C3F09;
-    color: #7C3F09;
-    height: 17px;
+  height: 17px;
+  border-bottom: 1px solid #7C3F09;
+  color: #7C3F09;
 }
 
-.grid{
-	clear: both;
-	overflow:hidden;
+div#wrapper div#content-wrapper {
+  width: 94.04%;
+  overflow: hidden; 
 }
+
+div#content-wrapper div#blog-tile {
+  width: 100%;
+  overflow: hidden;
+}
+
+div#content-wrapper div#main-content {
+  width: 72.59%;
+  overflow: hidden;
+  float: left;
+}
+
+div#content-wrapper div#side-bar {
+  width: 27.41%;
+  float: left;
+}
+
+/* End of div#wrapper */
+
+div#footer {
+  width: 100%;
+  height: 150px;
+}
+
+div#footer div#footer-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
