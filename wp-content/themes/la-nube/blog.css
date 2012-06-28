@@ -5,6 +5,10 @@ body {
   width:100%;
 }
 
+div#footer {
+  background: url('assets/stone.png');
+}
+
 body #content-wrapper {
   padding-left: 61px;
   overflow:hidden;

@@ -115,3 +115,15 @@ div#content-wrapper div#side-bar {
   width: 27.41%;
   float: left;
 }
+
+/* End of div#wrapper */
+
+div#footer {
+  width: 100%;
+  height: 150px;
+}
+
+div#footer div#footer-content {
+  margin: 0 auto;
+  overflow: hidden;
+}
