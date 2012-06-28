@@ -34,6 +34,10 @@ audio, video {
   font-weight: normal;
 }
 
+img {
+  margin:0;
+}
+
 code, pre {
   font-family:courier;
 }
@@ -49,7 +53,7 @@ a {
 /*  Page Architecture */ 
 
 div#wrapper {
-  margin:0px auto;
+  margin: 0px auto;
 }
 
 div#wrapper div#header {
@@ -58,7 +62,7 @@ div#wrapper div#header {
 }
 
 div#header a.logo {
-  width:70%;
+  width: 70%;
   float: left;
 }
 
@@ -128,3 +132,4 @@ div#footer div#footer-content {
   margin: 0 auto;
   overflow: hidden;
 }
+
