@@ -10,9 +10,4 @@ div#header, div#content-wrapper, div#footer {
 .grid .tile {
   width:74%;
 }
-.grid aside.tile {
-  width:23%;
-  overflow:hidden;
-  zoom:1;
-}
 
