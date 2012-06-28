@@ -3,7 +3,7 @@
     <div id="footer-content">
 	    
 	    <div>
-	    	<img src="<?php bloginfo('stylesheet_directory')?>/assets/header/blazing_cloud_logo.png" alt="Blazing Cloud Logo"/>
+	    	<img src="<?php bloginfo('stylesheet_directory')?>/assets/services_footer_logo.png" alt="Blazing Cloud Logo"/>
 	    </div>
 	    
 	    <div>
