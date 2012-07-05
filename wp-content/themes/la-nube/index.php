@@ -3,8 +3,9 @@
 <div id="content-wrapper">
     <div id='blog-title'>
       <h1>OUR BLOG</h1>
-      <p>Thoughts on strategy, design, development and the world we live in</p>
+      <p>Thoughts on development, design and the world we live in.</p>
     </div>
+    <hr></hr>
     <div id="main-content" class='grid'>
 
 <?php  the_post() ?>

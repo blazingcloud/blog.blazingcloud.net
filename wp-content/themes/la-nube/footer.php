@@ -2,21 +2,18 @@
 <div id="footer">
     <div id="footer-content">
 	    
-	    <div>
+	    <div class="footer-logo">
 	    	<img src="<?php bloginfo('stylesheet_directory')?>/assets/services_footer_logo.png" alt="Blazing Cloud Logo"/>
 	    </div>
 	    
-	    <div>
+	    <div class="contact-info">
 	    	<ul>
-        	<li>E info@blazingcloud.net</li>
-        	<li>P (415) 800 8085</li>
-        	<li>F (415) 738 5407</li>
-      	</ul>
+          <li><span>E mail</span> <a href="mailto:info@blazingcloud.net">info@blazingcloud.net</a></li>
+          <li><span>Phone</span> (415) 800-8085</li>
+          <li><span>Fax</span> (415) 738-5407</li>      	
+        </ul>
 	    </div>
-	    
-	    <div>
-	    	<p>&copy; BlazingCloud - San Francisco, CA, USA</p>
-	    </div>
+	    <span class="copyright">&copy; BlazingCloud - San Francisco, CA, USA</span>
     </div>
 </div>
 </body>

@@ -48,12 +48,14 @@ ul {
 
 a {
   text-decoration: none;
+  color: #E28F56;
 }
 
 /*  Page Architecture */ 
 
 div#wrapper {
   margin: 0px auto;
+  padding-bottom: 40px;
 }
 
 div#wrapper div#header {
@@ -104,9 +106,26 @@ div#wrapper div#content-wrapper {
   overflow: hidden; 
 }
 
-div#content-wrapper div#blog-tile {
+div#content-wrapper div#blog-title {
   width: 100%;
   overflow: hidden;
+  padding-bottom: 20px;
+}
+
+div#content-wrapper div#blog-title h1{
+  font-size: 30px;
+  font-family: "Arial Narrow",Arial;
+}
+
+div#content-wrapper hr {
+  width:90%;
+  position: relative;
+  left: -30px;
+  clear:both;
+  border:0;
+  border-top-width: 1px ;
+  border-top-style:solid; 
+  border-top-color:#eaeaea;
 }
 
 div#content-wrapper div#main-content {
@@ -124,12 +143,45 @@ div#content-wrapper div#side-bar {
 
 div#footer {
   width: 100%;
-  height: 150px;
 }
 
 div#footer div#footer-content {
+  overflow: hidden;
   max-width: 1024px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
+div#footer div#footer-content div.footer-logo {
+  width: 30%;
+  min-height: 73px;
+  min-width:228px;
+  float: left;
+}
+
+div#footer div#footer-content div.contact-info {
+  min-height: 73px;
+  width: 100%;
+}
+
+div#footer div#footer-content div.contact-info ul {
+  padding: 20px 0;
+}
+
+div#footer div#footer-content div.contact-info ul li {
+  padding: 0 10px;
+  color: #CDCDCD;
+}
+
+div#footer div#footer-content div.contact-info ul li span {
+  padding-right: 0.5%;
+  color: #888888;
+}
+
+div#footer div#footer-content span.copyright {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  color: #888;
+}

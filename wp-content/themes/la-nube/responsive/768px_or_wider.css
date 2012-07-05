@@ -7,6 +7,10 @@ div#header, div#content-wrapper, div#footer {
   width: 100%;
 }
 
+div#footer div#footer-content div.contact-info li {
+  display: inline;
+}
+
 .grid .tile {
   width: 74%;
 }
