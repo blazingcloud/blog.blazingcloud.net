@@ -29,5 +29,38 @@ div#header a.logo {
 
 div#header a.logo img {
 	width: 349px;
-  margin: 0px auto;
+	margin: 0px auto;
+}
+
+div#wrapper div#content-wrapper div#main-content {
+	width: 100%;
+}
+
+div#wrapper div#content-wrapper div#main-content div#nav-below{
+	margin-bottom: 2%;
+}
+ 
+div#wrapper div#content-wrapper div#side-bar {
+	width: 50%;
+}
+
+div#wrapper div#content-wrapper div#side-bar ul li.widget_tag_cloud {
+	display: none;
+}
+
+div#footer div#footer-content div.footer-logo img {
+	display: none;
+}
+
+div#footer div#footer-content div.footer-logo {
+    background: url('../assets/only-shadow.png') no-repeat;
+    background-position: center center;
+    margin: 0;
+    width: 100%;
+}
+
+
+div#footer div#footer-content div.contact-info {
+	text-align:center;
+	width: 100%;
 }

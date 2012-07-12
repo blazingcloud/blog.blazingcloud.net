@@ -26,7 +26,15 @@ body #content-wrapper {
   margin-top:2em;
   margin-bottom:2em;
   margin-right:2em;
+  line-height: 1.6;
 }
+
+.entry img {
+  margin: 5% 0%;
+  width: 100%;
+  overflow: hidden;
+}
+
 .entry li {
   margin-left:0.25em
 }
@@ -55,6 +63,13 @@ body #content-wrapper {
 .ctc .widgettitle {
   margin-bottom:1em;
 }
+
+.tagcloud a{
+  display: block;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  line-height: 1.6;
+}
+
 .entry .meta {
   margin-top:-0.5em;
   font-weight:bold;
@@ -64,7 +79,6 @@ code, pre {
   font-family:courier;
 }
 .sidebar .widget {
-  margin-top:2em;
   margin-bottom:2em;
 
 }

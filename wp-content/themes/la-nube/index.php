@@ -5,7 +5,7 @@
       <h1>OUR BLOG</h1>
       <p>Thoughts on development, design and the world we live in.</p>
     </div>
-    <hr></hr>
+    <hr>
     <div id="main-content" class='grid'>
 
 <?php  the_post() ?>
