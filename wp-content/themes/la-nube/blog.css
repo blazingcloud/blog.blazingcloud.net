@@ -1,0 +1,92 @@
+/* blog */
+body {
+  background: url('assets/wheat.png');
+  color:rgb(50,50,50);
+  width:100%;
+  margin-top:0;
+}
+
+div#footer {
+  background: url('assets/stone.png');
+}
+
+body #content-wrapper {
+  padding-left: 61px;
+  overflow:hidden;
+}
+.introduction {
+  margin-top:51px;
+  margin-bottom:37px;
+}
+.introduction h1 {
+  font-family: PTSansNarrowRegular;
+  font-size:1.75em
+}
+.entry .content , .entry p, .entry li {
+  margin-top:2em;
+  margin-bottom:2em;
+  margin-right:2em;
+  line-height: 1.6;
+}
+
+.entry img {
+  margin: 5% 0%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.entry li {
+  margin-left:0.25em
+}
+
+.entry .meta * {
+  font-size: 14px;
+}
+
+.ctc a,
+.widget_recent_entries a,
+.entry .title {
+  font-family: PTSansNarrowBold;
+  display:block;
+  font-size:1.875em;
+  text-decoration:none;
+}
+.ctc a ,
+.widget_recent_entries a {
+  font-size:1.1875em;
+  font-weight:none;
+}
+.widget_recent_entries a {
+  margin-top:1em;
+  margin-bottom:1em;
+}
+.ctc .widgettitle {
+  margin-bottom:1em;
+}
+
+.tagcloud a{
+  display: block;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  line-height: 1.6;
+}
+
+.entry .meta {
+  margin-top:-0.5em;
+  font-weight:bold;
+}
+
+code, pre {
+  font-family:courier;
+}
+.sidebar .widget {
+  margin-bottom:2em;
+
+}
+nav.archives {
+  margin-top:2em;
+  margin-bottom:1.5em;
+}
+nav.archives a {
+  font-size:1.5em;
+}
+

@@ -1,0 +1,66 @@
+div#wrapper {
+	max-width: 767px;
+}
+
+div#header a.logo, div#header ul#nav {
+	float:none;
+	text-align:center;
+}
+
+div#header ul#nav {
+	padding-left: 3%;
+}
+
+div#header ul#nav li {
+	float:none;
+	display: inline;	
+	padding: 0px;
+	margin: 0px;
+}
+
+div#header ul#nav li a {
+	display: inline;
+}
+
+div#header a.logo {
+	display: block;
+	width: 100%;
+}
+
+div#header a.logo img {
+	width: 349px;
+	margin: 0px auto;
+}
+
+div#wrapper div#content-wrapper div#main-content {
+	width: 100%;
+}
+
+div#wrapper div#content-wrapper div#main-content div#nav-below{
+	margin-bottom: 2%;
+}
+ 
+div#wrapper div#content-wrapper div#side-bar {
+	width: 50%;
+}
+
+div#wrapper div#content-wrapper div#side-bar ul li.widget_tag_cloud {
+	display: none;
+}
+
+div#footer div#footer-content div.footer-logo img {
+	display: none;
+}
+
+div#footer div#footer-content div.footer-logo {
+    background: url('../assets/footer/only-shadow.png') no-repeat;
+    background-position: center center;
+    margin: 0;
+    width: 100%;
+}
+
+
+div#footer div#footer-content div.contact-info {
+	text-align:center;
+	width: 100%;
+}
