@@ -1,265 +1,180 @@
 <?php
+/**
+ * Widgets
+ *
+ * @package ThematicCoreLibrary
+ * @subpackage Widgets
+ */
 
-// Pre-set Widgets
-$preset_widgets = array (
-	'primary-aside'  => array( 'search', 'pages', 'categories', 'archives' ),
-	'secondary-aside'  => array( 'links', 'RSS Links', 'meta' )
-);
-if ( isset( $_GET['activated'] ) ) {
-	update_option( 'sidebars_widgets', $preset_widgets );
+
+/**
+ * Markup before the widget
+ */
+function thematic_before_widget() {
+	$content = '<li id="%1$s" class="widgetcontainer %2$s">';
+	return apply_filters('thematic_before_widget', $content);
 }
 
 
-// Check for static widgets in widget-ready areas
-
-function is_sidebar_active( $index ){
-  global $wp_registered_sidebars;
-
-  $widgetcolums = wp_get_sidebars_widgets();
-		 
-  if ($widgetcolums[$index]) return true;
-  
-	return false;
+/**
+ * Markup after the widget
+ */
+function thematic_after_widget() {
+	$content = '</li>';
+	return apply_filters('thematic_after_widget', $content);
 }
 
+
+
+/**
+ * Markup before the widget title
+ */
 function thematic_before_title() {
-	$content = "<h2 class=\"widgettitle\">";
+	$content = "<h3 class=\"widgettitle\">";
 	return apply_filters('thematic_before_title', $content);
 }
 
+
+/**
+ * Markup after the widget title
+ */
 function thematic_after_title() {
-	$content = "</h2>\n";
+	$content = "</h3>\n";
 	return apply_filters('thematic_after_title', $content);
 }
 
-// Widget: Thematic Search
-function widget_thematic_search($args) {
-	extract($args);
-	if ( empty($title) )
-		$title = __('Search', 'thematic');
-?>
-			<?php echo $before_widget ?>
-				<?php echo thematic_before_title() ?><label for="s"><?php echo $title ?></label><?php echo thematic_after_title();
-				get_search_form();
-			echo $after_widget;
-}
 
-// Widget: Thematic Meta
-function widget_thematic_meta($args) {
-	extract($args);
-	if ( empty($title) )
-		$title = __('Meta', 'thematic');
+/**
+ * Search widget class
+ *
+ * @since 0.9.6.3
+ */
+class Thematic_Widget_Search extends WP_Widget {
+
+	function Thematic_Widget_Search() {
+		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'thematic') );
+		$this->WP_Widget('search', __('Search', 'thematic'), $widget_ops);
+	}
+
+	function widget( $args, $instance ) {
+		extract($args);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('Search', 'thematic') : $instance['title']);
+
+		echo $before_widget;
+		if ( $title )
+			echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title;
+
+		// Use current theme search form if it exists
+		get_search_form();
+
+		echo $after_widget;
+	}
+
+	function form( $instance ) {
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '') );
+		$title = $instance['title'];
 ?>
-			<?php echo $before_widget; ?>
-				<?php echo thematic_before_title() . $title . thematic_after_title(); ?>
-				<ul>
-					<?php wp_register() ?>
-					<li><?php wp_loginout() ?></li>
-					<?php wp_meta() ?>
-				</ul>
-			<?php echo $after_widget; ?>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
 <?php
+	}
+
+	function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+		$new_instance = wp_parse_args((array) $new_instance, array( 'title' => ''));
+		$instance['title'] = strip_tags($new_instance['title']);
+		return $instance;
+	}
+
 }
 
-// Widget: Thematic RSS links
-function widget_thematic_rsslinks($args) {
-	extract($args);
-	$options = get_option('widget_thematic_rsslinks');
-	$title = empty($options['title']) ? __('RSS Links', 'thematic') : $options['title'];
+/**
+ * Meta widget class
+ *
+ * Displays log in/out
+ *
+ * @since 0.9.6.3
+ */
+class Thematic_Widget_Meta extends WP_Widget {
+
+	function Thematic_Widget_Meta() {
+		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'thematic') );
+		$this->WP_Widget('meta', __('Meta', 'thematic'), $widget_ops);
+	}
+
+	function widget( $args, $instance ) {
+		extract($args);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('Meta', 'thematic') : $instance['title']);
+
+		echo $before_widget;
+		if ( $title )
+			echo $before_title . $title . $after_title;
 ?>
-		<?php echo $before_widget; ?>
-			<?php echo thematic_before_title() . $title . thematic_after_title(); ?>
 			<ul>
-				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
-				<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
+			<?php wp_register(); ?>
+			<li><?php wp_loginout(); ?></li>
+			<?php wp_meta(); ?>
 			</ul>
-		<?php echo $after_widget; ?>
 <?php
-}
+		echo $after_widget;
+	}
 
-// Widget: RSS links; element controls for customizing text within Widget plugin
-function widget_thematic_rsslinks_control() {
-	$options = $newoptions = get_option('widget_thematic_rsslinks');
-	if ( $_POST["rsslinks-submit"] ) {
-		$newoptions['title'] = strip_tags(stripslashes($_POST["rsslinks-title"]));
+	function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+
+		return $instance;
 	}
-	if ( $options != $newoptions ) {
-		$options = $newoptions;
-		update_option('widget_thematic_rsslinks', $options);
-	}
-	$title = htmlspecialchars($options['title'], ENT_QUOTES);
+
+	function form( $instance ) {
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
+		$title = strip_tags($instance['title']);
 ?>
-			<p><label for="rsslinks-title"><?php _e('Title:'); ?> <input style="width: 250px;" id="rsslinks-title" name="rsslinks-title" type="text" value="<?php echo $title; ?>" /></label></p>
-			<input type="hidden" id="rsslinks-submit" name="rsslinks-submit" value="1" />
+			<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?></label> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 <?php
+	}
 }
-
-// Widgets plugin: intializes the plugin after the widgets above have passed snuff
-function thematic_widgets_init() {
-	if ( !function_exists('register_sidebars') )
-		return;
-
-	// Register Widgetized areas.
-	// Area 1
-    register_sidebar(array(
-       	'name' => 'Primary Aside',
-       	'id' => 'primary-aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));
-
-	// Area 2
-    register_sidebar(array(
-       	'name' => 'Secondary Aside',
-       	'id' => 'secondary-aside', 
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));
-
-	// Area 3
-    register_sidebar(array(
-       	'name' => '1st Subsidiary Aside',
-       	'id' => '1st-subsidiary-aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
-
-	// Area 4
-    register_sidebar(array(
-       	'name' => '2nd Subsidiary Aside',
-       	'id' => '2nd-subsidiary-aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
-   
-	// Area 5
-    register_sidebar(array(
-       	'name' => '3rd Subsidiary Aside',
-       	'id' => '3rd-subsidiary-aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
-
-	// Area 6
-    register_sidebar(array(
-       	'name' => 'Index Top',
-       	'id' => 'index-top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
-
-	// Area 7
-    register_sidebar(array(
-       	'name' => 'Index Insert',
-       	'id' => 'index-insert',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));
-
-	// Area 8
-    register_sidebar(array(
-       	'name' => 'Index Bottom',
-       	'id' => 'index-bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
-
-	// Area 9
-    register_sidebar(array(
-       	'name' => 'Single Top',
-       	'id' => 'single-top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
-
-	// Area 10
-    register_sidebar(array(
-       	'name' => 'Single Insert',
-       	'id' => 'single-insert',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
     
-	// Area 11
-    register_sidebar(array(
-       	'name' => 'Single Bottom',
-       	'id' => 'single-bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
-      
-	// Area 12
-    register_sidebar(array(
-       	'name' => 'Page Top',
-       	'id' => 'page-top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
-   
-	// Area 13
-    register_sidebar(array(
-       	'name' => 'Page Bottom',
-       	'id' => 'page-bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
-	  
-    // we will check for a Thematic widgets directory and and add and activate additional widgets
-    // Thanks to Joern Kretzschmar
-	  $widgets_dir = @ dir(ABSPATH . '/wp-content/themes/' . get_template() . '/widgets');
-	  if ($widgets_dir)	{
-		  while(($widgetFile = $widgets_dir->read()) !== false) {
-			 if (!preg_match('|^\.+$|', $widgetFile) && preg_match('|\.php$|', $widgetFile))
-				  include(ABSPATH . '/wp-content/themes/' . get_template() . '/widgets/' . $widgetFile);
-		  }
-	  }
+/**
+ * RSS links widget class
+ *
+ * @since 0.9.6.3
+ */
+class Thematic_Widget_RSSlinks extends WP_Widget {
 
-	  // we will check for the child themes widgets directory and add and activate additional widgets
-    // Thanks to Joern Kretzschmar 
-	  $widgets_dir = @ dir(ABSPATH . '/wp-content/themes/' . get_stylesheet() . '/widgets');
-	  if ((TEMPLATENAME != THEMENAME) && ($widgets_dir)) {
-		  while(($widgetFile = $widgets_dir->read()) !== false) {
-			 if (!preg_match('|^\.+$|', $widgetFile) && preg_match('|\.php$|', $widgetFile))
-				  include(ABSPATH . '/wp-content/themes/' . get_stylesheet() . '/widgets/' . $widgetFile);
-		  }
-	  }   
-   
-	// Finished intializing Widgets plugin, now let's load the thematic default widgets
-	register_sidebar_widget(__('Search', 'thematic'), 'widget_thematic_search', null, 'search');
-	unregister_widget_control('search');
-	register_sidebar_widget(__('Meta', 'thematic'), 'widget_thematic_meta', null, 'meta');
-	unregister_widget_control('meta');
-	register_sidebar_widget(array(__('RSS Links', 'thematic'), 'widgets'), 'widget_thematic_rsslinks');
-	register_widget_control(array(__('RSS Links', 'thematic'), 'widgets'), 'widget_thematic_rsslinks_control', 300, 90);
+	function Thematic_Widget_RSSlinks() {
+		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'thematic') );
+		$this->WP_Widget( 'rss-links', __('RSS Links', 'thematic'), $widget_ops);
+	}
+
+	function widget($args, $instance) {
+		extract($args);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('RSS Links', 'thematic') : $instance['title']);
+		echo $before_widget;
+		if ( $title )
+			echo $before_title . $title . $after_title;
+?>
+			<ul>
+				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
+				<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ) ?> <?php esc_attr_e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
+			</ul>
+<?php
+		echo $after_widget;
+	}
+
+	function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+
+		return $instance;
+	}
+
+	function form( $instance ) {
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
+		$title = strip_tags($instance['title']);
+?>
+			<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?></label> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
+<?php
+	}
 }
-
-// Runs our code at the end to check that everything needed has loaded
-add_action( 'init', 'thematic_widgets_init' );
 
 ?>

@@ -1,33 +1,102 @@
 <?php
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
-    }
+/**
+ * Attachments Template
+ *
+ * Displays singular WordPress Media Library items.
+ *
+ * @package Thematic
+ * @subpackage Templates
+ *
+ * @link http://codex.wordpress.org/Using_Image_and_File_Attachments Codex:Using Attachments
+ */
+
+	// calling the header.php
+	get_header();
+
+	// action hook for placing content above #container
+	thematic_abovecontainer();
 ?>
-<?php get_header() ?>
 
-	<div id="container">
-		<div id="content">
+		<div id="container">
 
-<?php the_post() ?>
+			<?php
+				// action hook for placing content above #content
+				thematic_abovecontent();
 
-			<?php thematic_page_title() ?>
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
-					<div class="entry-attachment"><?php the_attachment_link($post->post_ID, true) ?></div>
-<?php the_content(more_text()); ?>
+				// filter for manipulating the element that wraps the content 
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 
-					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
+	            // start the loop
+	            while ( have_posts() ) : the_post();
 
-<?php comments_template(); ?>
+	        	// displays the page title
+				thematic_page_title();
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+				// action hook for placing content above #post
+				thematic_abovepost();
+			?>
 
-<?php thematic_sidebar() ?>
-<?php get_footer() ?>
+				<?php
+					echo '<div id="post-' . get_the_ID() . '" ';
+					// Checking for defined constant to enable Thematic's post classes
+					if ( !( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
+					    post_class();
+					    echo '>';
+					} else {
+					    echo 'class="';
+					    thematic_post_class();
+					    echo '">';
+					}
+
+	            	// creating the post header
+	            	thematic_postheader();
+	            ?>
+
+					<div class="entry-content">
+
+						<div class="entry-attachment"><?php the_attachment_link( $post->ID, true ) ?></div>
+
+	                        <?php 
+	                        	the_content( thematic_more_text() );
+
+	                        	wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'thematic' ) . '&after=</div>' );
+	                        ?>
+
+					</div><!-- .entry-content -->
+
+					<?php
+	                	// creating the post footer
+	                	thematic_postfooter();
+	                ?>
+
+				</div><!-- #post -->
+
+	            <?php
+					// action hook for placing contentbelow #post
+					thematic_belowpost();
+					
+       				// action hook for calling the comments_template
+					thematic_comments_template();
+					
+					// end loop
+        			endwhile;
+	            ?>
+
+			</div><!-- #content -->
+
+			<?php 
+				// action hook for placing content below #content
+				thematic_belowcontent();
+			?>		
+		</div><!-- #container -->
+
+<?php 
+	// action hook for placing content below #container
+	thematic_belowcontainer();
+
+	// calling the standard sidebar 
+	thematic_sidebar();
+
+	// calling footer.php
+	get_footer();
+?>

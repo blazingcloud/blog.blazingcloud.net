@@ -1,29 +1,65 @@
 <?php
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
-    }
+/**
+ * Category Template
+ *
+ * Displays an archive index of posts assigned to a Category. 
+ *
+ * @package Thematic
+ * @subpackage Templates
+ *
+ * @link http://codex.wordpress.org/Category_Templates Codex: Category Templates
+ */
+
+	// calling the header.php
+	get_header();
+
+	// action hook for placing content above #container
+	thematic_abovecontainer();
 ?>
-<?php get_header() ?>
-	
-	<div id="container">
-		<div id="content">
 
-		<?php thematic_page_title() ?>
+		<div id="container">
 
-			<?php thematic_navigation_above();?>
-			
-<?php thematic_above_categoryloop() ?>			
+			<?php
+				// action hook for placing content above #content
+				thematic_abovecontent();
 
-<?php thematic_categoryloop() ?>
+				// filter for manipulating the element that wraps the content 
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 
-<?php thematic_below_categoryloop() ?>			
+				// displays the page title
+	        	thematic_page_title();
 
-			<?php thematic_navigation_below();?>
+	        	// create the navigation above the content
+	        	thematic_navigation_above();
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+	        	// action hook for placing content above the category loop
+	        	thematic_above_categoryloop();			
 
-<?php thematic_sidebar() ?>
-<?php get_footer() ?>
+	        	// action hook creating the category loop
+	        	thematic_categoryloop();
+
+	        	// action hook for placing content below the category loop
+	        	thematic_below_categoryloop();			
+
+	        	// create the navigation below the content
+	        	thematic_navigation_below();
+	        ?>
+
+			</div><!-- #content -->
+
+			<?php
+				// action hook for placing content below #content
+				thematic_belowcontent();
+			?>
+		</div><!-- #container -->
+
+<?php
+	// action hook for placing content below #container
+	thematic_belowcontainer();
+
+	// calling the standard sidebar 
+	thematic_sidebar();
+
+	// calling footer.php
+	get_footer();
+?>

@@ -1,9 +1,19 @@
-<?php thematic_abovepagebottom() ?>
+<?php
+/**
+ * Sidebar Page Bottom Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
 
-<?php if ( is_sidebar_active('page-bottom') ) { // there is active widgets for this sidebar
-    echo '<div id="page-bottom" class="aside">'. "\n" . '<ul class="xoxo">' . "\n";
-    dynamic_sidebar('page-bottom');
-    echo '</ul>' . "\n" . '</div><!-- #page-bottom .aside -->'. "\n";
-} ?>
+    // action hook for placing content above the 'page-bottom' widget area
+    thematic_abovepagebottom();
 
-<?php thematic_belowpagebottom() ?>
+    // action hook for creating the 'page-bottom' widget area
+    thematic_widget_area_page_bottom();
+
+    // action hook for placing content below the 'page-bottom' widget area
+    thematic_belowpagebottom();
+?>

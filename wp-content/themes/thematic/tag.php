@@ -1,29 +1,65 @@
 <?php
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
-    }
+/**
+ * Tag Archive Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+
+
+    // calling the header.php
+    get_header();
+
+    // action hook for placing content above #container
+    thematic_abovecontainer();
 ?>
-<?php get_header() ?>
-	
-	<div id="container">
-		<div id="content">
 
-	<?php thematic_page_title() ?>
+		<div id="container">
+		
+			<?php
+				// action hook for placing content above #content
+				thematic_abovecontent();
 
-			<?php thematic_navigation_above();?>
+				// filter for manipulating the element that wraps the content 
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 			
-<?php thematic_above_tagloop() ?>			
+				// displays the page title
+	            thematic_page_title();
+	
+	            // create the navigation above the content
+	            thematic_navigation_above();
+				
+	            // action hook for placing content above the tag loop
+	            thematic_above_tagloop();		
+	
+	            // action hook creating the tag loop
+	            thematic_tagloop();
+	
+	            // action hook for placing content below the tag loop
+	            thematic_below_tagloop();
+	
+	            // create the navigation below the content
+	            thematic_navigation_below();
+			?>
+	
+			</div><!-- #content -->
+			
+			<?php 
+				// action hook for placing content below #content
+				thematic_belowcontent();
+			?>
+						
+		</div><!-- #container -->
+	
+<?php 
+    // action hook for placing content below #container
+    thematic_belowcontainer();
 
-<?php thematic_tagloop() ?>
-
-<?php thematic_below_tagloop() ?>			
-
-			<?php thematic_navigation_below();?>
-
-		</div><!-- #content -->
-	</div><!-- #container -->
-
-<?php thematic_sidebar() ?>
-<?php get_footer() ?>
+    // calling the standard sidebar 
+    thematic_sidebar();
+    
+    // calling footer.php
+    get_footer();
+?>

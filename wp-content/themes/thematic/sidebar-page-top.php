@@ -1,9 +1,19 @@
-<?php thematic_abovepagetop() ?>
+<?php
+/**
+ * Sidebar Page Top Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
 
-<?php if ( is_sidebar_active('page-top') ) { // there is active widgets for this sidebar
-    echo '<div id="page-top" class="aside">'. "\n" . '<ul class="xoxo">' . "\n";
-    dynamic_sidebar('page-top');
-    echo '</ul>' . "\n" . '</div><!-- #page-top .aside -->'. "\n";
-} ?>
+    // action hook for placing content above the 'page-top' widget area
+    thematic_abovepagetop();
 
-<?php thematic_belowpagetop() ?>
+    // action hook for creating the 'page-top' widget area
+    thematic_widget_area_page_top();
+
+    // action hook for placing content below the 'page-top' widget area
+    thematic_belowpagetop();
+?>

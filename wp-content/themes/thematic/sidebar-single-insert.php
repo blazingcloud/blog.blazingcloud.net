@@ -1,9 +1,19 @@
-<?php thematic_abovesingleinsert() ?>
+<?php
+/**
+ * Sidebar Single Insert Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+   
+    // action hook for placing content above the 'single-insert' widget area
+    thematic_abovesingleinsert();
 
-<?php if ( is_sidebar_active('single-insert') ) { // there is active widgets for this sidebar
-    echo '<div id="single-insert" class="aside">'. "\n" . '<ul class="xoxo">' . "\n";
-    dynamic_sidebar('single-insert');
-    echo '</ul>' . "\n" . '</div><!-- #single-insert .aside -->' . "\n";
-} ?>
+    // action hook for creating the 'single-insert' widget area
+    thematic_widget_area_single_insert();
 
-<?php thematic_belowsingleinsert() ?>
+    // action hook for placing content below the 'single-insert' widget area
+    thematic_belowsingleinsert(); 
+?>

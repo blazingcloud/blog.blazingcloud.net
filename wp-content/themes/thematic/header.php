@@ -1,40 +1,91 @@
-<?php thematic_create_doctype(); echo " "; language_attributes(); echo ">\n";?>
-<head profile="http://gmpg.org/xfn/11">
-<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
-<?php 
-
-thematic_doctitle();
-thematic_create_contenttype();
-thematic_show_description();
-thematic_show_robots();
-thematic_canonical_url();
-thematic_create_stylesheet();
-thematic_show_rss();
-thematic_show_commentsrss();
-thematic_show_pingback();
-thematic_show_commentreply();
-
-wp_head(); ?>
-
+<?php
+/**
+ * Header Template
+ *
+ * This template calls a series of functions that output the head tag of the document.
+ * The body and div #main elements are opened at the end of this file. 
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+ 
+	// Create doctype
+	thematic_create_doctype();
+	echo " ";
+	language_attributes();
+	echo ">\n";
+	
+	// Opens the head tag 
+	thematic_head_profile();
+	
+	// Create the meta content type
+	thematic_create_contenttype();
+	
+	// Create the title tag 
+	thematic_doctitle();
+	
+	// Create the meta description
+	thematic_show_description();
+	
+	// Create the tag <meta name="robots"  
+	thematic_show_robots();
+	
+	// Constant defined true by default 
+	if (THEMATIC_COMPATIBLE_FEEDLINKS) {    
+		// Creating the internal RSS links
+		thematic_show_rss();
+	
+		// Create comments RSS links
+		thematic_show_commentsrss();
+	}
+	
+	// Create pingback adress
+	thematic_show_pingback();
+	
+	/* The function wp_head() loads Thematic's stylesheet and scripts.
+	 * Calling wp_head() is required to provide plugins and child themes
+	 * the ability to insert markup within the <head> tag.
+	 */
+	wp_head();
+?>
 </head>
 
-<body class="<?php thematic_body_class() ?>">
-<?php thematic_before(); ?>
+<?php 
+	// Create the body element and dynamic body classes
+	thematic_body();
 
-<div id="wrapper" class="hfeed">
+	// Action hook to place content before opening #wrapper
+	thematic_before(); 
+?>
+	<?php
+		// Filter provided for removing output of wrapping element follows the body tag
+		if ( apply_filters( 'thematic_open_wrapper', true ) ) 
+  		  echo ( '<div id="wrapper" class="hfeed">' );
 
-<?php thematic_aboveheader(); ?>   
-    <div id="header">
-       <div id="header-nav">
-       
-        </div>
-        <div id="main-header">
-           <img src="http://blazingcloud.net/wordpress/wp-content/themes/thematicsamplechildtheme/images/header.png" alt="BlazingCloud" />
-        </div>
-        <?php thematic_header() ?>
-    </div><!-- #header-->
+		// Action hook for placing content above the theme header
+		thematic_aboveheader(); 
+	?>
 
-<?php thematic_belowheader(); ?>   
 
-    <div id="main">
-    
+		<?php
+			// Filter provided for altering output of the header opening element
+			echo ( apply_filters( 'thematic_open_header',  '<div id="header">' ) );
+    	?>
+
+
+        	<?php 
+				// Action hook creating the theme header
+				thematic_header();
+       		?>
+       		
+    	<?php  	
+    		// Filter provided for altering output of the header closing element
+			echo ( apply_filters( 'thematic_close_header', '</div><!-- #header-->' ) );
+		?>
+		        
+    	<?php
+			// Action hook for placing content below the theme header
+			thematic_belowheader();
+    	?>
+    	
+	<div id="main">

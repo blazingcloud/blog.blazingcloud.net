@@ -1,9 +1,19 @@
-<?php thematic_abovesingletop() ?>
+<?php
+/**
+ * Sidebar Single Top Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
 
-<?php if ( is_sidebar_active('single-top') ) { // there is active widgets for this sidebar
-    echo '<div id="single-top" class="aside">'. "\n" . '<ul class="xoxo">' . "\n";
-    dynamic_sidebar('single-top');
-    echo '</ul>' . "\n" . '</div><!-- #single-top .aside -->' . "\n";
-} ?>
+    // action hook for placing content above the 'single-top' widget area
+    thematic_abovesingletop();
 
-<?php thematic_belowsingletop() ?>
+    // action hook for creating the 'single-top' widget area
+    thematic_widget_area_single_top();
+
+    // action hook for placing content below the 'single-top' widget area
+    thematic_belowsingletop(); 
+?>

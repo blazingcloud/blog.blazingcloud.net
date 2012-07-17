@@ -1,9 +1,19 @@
-<?php thematic_aboveindexbottom() ?>
+<?php 
+/**
+ * Sidebar Index Bottom Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+ 
+    // action hook for placing content above the 'index-bottom' widget area
+    thematic_aboveindexbottom();
 
-<?php if ( is_sidebar_active('index-bottom') ) { // there is active widgets for this sidebar
-    echo '<div id="index-bottom" class="aside">'. "\n" . '<ul class="xoxo">' . "\n";
-    dynamic_sidebar('index-bottom');
-    echo '</ul>' . "\n" . '</div><!-- #index-bottom .aside -->'. "\n";
-} ?>
+    // action hook creating the 'index-bottom' widget area
+    thematic_widget_area_index_bottom();
 
-<?php thematic_belowindexbottom() ?>
+    // action hook for placing content below the 'index-bottom' widget area
+    thematic_belowindexbottom();
+?>

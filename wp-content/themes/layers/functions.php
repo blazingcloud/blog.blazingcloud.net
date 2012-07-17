@@ -1,4 +1,5 @@
 <?php
+
 load_theme_textdomain('layers');
 
 if ( function_exists('register_sidebar') )

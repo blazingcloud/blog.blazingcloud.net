@@ -1,9 +1,19 @@
-<?php thematic_aboveindextop() ?>
+<?php
+/**
+ * Sidebar Index Top Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
 
-<?php if ( is_sidebar_active('index-top') ) { // there is active widgets for this sidebar
-    echo '<div id="index-top" class="aside">'. "\n" . '<ul class="xoxo">' . "\n";
-    dynamic_sidebar('index-top');
-    echo '</ul>' . "\n" . '</div><!-- #index-top .aside -->'. "\n";
-} ?>
+    // action hook for placing content above the 'index-top' widget area
+    thematic_aboveindextop();
 
-<?php thematic_belowindextop() ?>
+    // action hook for creating the 'index-top' widget area
+    thematic_widget_area_index_top();
+
+    // action hook for placing content below the 'index-top' widget area
+    thematic_belowindextop();
+?>  

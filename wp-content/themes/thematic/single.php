@@ -1,32 +1,72 @@
 <?php
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
-    }
+/**
+ * Single Post Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+
+    // calling the header.php
+    get_header();
+
+    // action hook for placing content above #container
+    thematic_abovecontainer();
 ?>
-<?php get_header() ?>
 
-	<div id="container">
-		<div id="content">
-
-<?php the_post(); ?>
-			<?php thematic_navigation_above();?>
-
-<?php get_sidebar('single-top') ?>
-
-<?php thematic_singlepost() ?>
+		<div id="container">
 			
-<?php get_sidebar('single-insert') ?>
+			<?php
+				// action hook for placing content above #content
+				thematic_abovecontent();
+						
+				// filter for manipulating the element that wraps the content 
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
+							
+	            // start the loop
+	            while ( have_posts() ) : the_post();
+    	        
+    	        // create the navigation above the content
+				thematic_navigation_above();
+		
+    	        // calling the widget area 'single-top'
+    	        get_sidebar('single-top');
+		
+    	        // action hook creating the single post
+    	        thematic_singlepost();
+				
+    	        // calling the widget area 'single-insert'
+    	        get_sidebar('single-insert');
+		
+    	        // create the navigation below the content
+				thematic_navigation_below();
+		
+       			// action hook for calling the comments_template
+    	        thematic_comments_template();
+    	        
+    	        // end the loop
+        		endwhile;
+		
+    	        // calling the widget area 'single-bottom'
+    	        get_sidebar('single-bottom');
+			?>
+		
+			</div><!-- #content -->
+			
+			<?php
+				// action hook for placing content below #content
+				thematic_belowcontent();
+			?> 
+		</div><!-- #container -->
+		
+<?php 
+    // action hook for placing content below #container
+    thematic_belowcontainer();
 
-			<?php thematic_navigation_below();?>
-
-<?php thematic_comments_template(); ?>
-
-<?php get_sidebar('single-bottom') ?>
-
-		</div><!-- #content -->
-	</div><!-- #container -->
-
-<?php thematic_sidebar() ?>
-<?php get_footer() ?>
+    // calling the standard sidebar 
+    thematic_sidebar();
+    
+    // calling footer.php
+    get_footer();
+?>

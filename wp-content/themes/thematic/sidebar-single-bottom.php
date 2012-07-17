@@ -1,9 +1,19 @@
-<?php thematic_abovesinglebottom() ?>
+<?php
+/**
+ * Sidebar Single Bottom Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
 
-<?php if ( is_sidebar_active('single-bottom') ) { // there is active widgets for this sidebar
-    echo '<div id="single-bottom" class="aside">'. "\n" . '<ul class="xoxo">' . "\n";
-    dynamic_sidebar('single-bottom');
-    echo '</ul>' . "\n" . '</div><!-- #single-bottom .aside -->'. "\n";
-} ?>
+    // action hook for placing content above the 'single-bottom' widget area
+    thematic_abovesinglebottom();
 
-<?php thematic_belowsinglebottom() ?>
+    // action hook for creating the 'single-bottom' widget area
+    thematic_widget_area_single_bottom();
+
+    // action hook for placing content below the 'single-bottom' widget area
+    thematic_belowsinglebottom();
+?>
