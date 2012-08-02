@@ -1,0 +1,178 @@
+/*
+Theme Name: Classic
+Description: Clean, crisp and colorful. 
+Version: 1.3
+Author: Aram Kocharyan
+Author URI: http://ak.net84.net/
+*/
+
+/* Code Style ====================== */
+.crayon-theme-bc {
+    border: 1px #999 solid !important;
+    text-shadow: none !important;
+}
+
+.crayon-theme-bc,
+.crayon-theme-bc .crayon-code {
+	background: #fdfdfd !important;
+}
+
+/* Inline Style */
+.crayon-theme-bc-inline {
+	border: 1px solid #ddd !important;
+	background: #fafafa !important;
+}
+
+/* Line Numbers */
+.crayon-theme-bc .crayon-nums {
+	background: #dfefff !important;
+	color: #5499de !important;
+	border-right: 1px solid #b3d3f3 !important;
+}
+
+/* Selection */
+.crayon-theme-bc .crayon-code::selection,
+.crayon-theme-bc .crayon-code *::selection {
+    background: #ddeeff !important;
+    color: #316ba5 !important;
+}
+.crayon-theme-bc::selection,
+.crayon-theme-bc .crayon-toolbar::selection,
+.crayon-theme-bc .crayon-toolbar *::selection,
+.crayon-theme-bc .crayon-info::selection,
+.crayon-theme-bc .crayon-info *::selection,
+.crayon-theme-bc .crayon-nums::selection,
+.crayon-theme-bc .crayon-nums *::selection {
+    background: transparent !important;
+}
+
+/* Striped Lines */
+.crayon-theme-bc .crayon-striped-line {
+    background: #FEFAEA !important;
+    border: 1px #CCC !important;
+}
+.crayon-theme-bc .crayon-striped-num {
+    background: #c8e1fa !important;
+    border: 1px #CCC !important;
+    color: #317cc5 !important;
+}
+
+/* Marked Lines */
+.crayon-theme-bc .crayon-marked-line {
+    background: #EEEE88 !important;
+    border: 1px #8888FF !important;
+}
+.crayon-theme-bc .crayon-marked-num {
+    color: #1561ac !important;
+    background: #b3d3f4 !important;
+    border: 1px #5999d9 !important;
+}
+.crayon-theme-bc .crayon-marked-line.crayon-striped-line {
+    background: #EEEE88 !important;
+}
+.crayon-theme-bc .crayon-marked-num.crayon-striped-num {
+    background: #9ec5ec !important;
+    color: #105395 !important;
+}
+.crayon-theme-bc .crayon-marked-line.crayon-top,
+.crayon-theme-bc .crayon-marked-num.crayon-top {
+    border-top-style: solid !important;
+}
+.crayon-theme-bc .crayon-marked-line.crayon-bottom,
+.crayon-theme-bc .crayon-marked-num.crayon-bottom {
+    border-bottom-style: solid !important;
+}
+
+/* Info */
+.crayon-theme-bc .crayon-info {
+    background: #faf9d7 !important;
+    border-bottom: 1px #b1af5e solid !important;
+    color: #7e7d34;
+}
+
+/* Toolbar */
+.crayon-theme-bc .crayon-toolbar {
+    background: #DDD !important;
+    border-bottom: 1px #BBB solid !important;
+}
+.crayon-theme-bc .crayon-toolbar > div {
+    float: left !important;
+}
+.crayon-theme-bc .crayon-toolbar .crayon-tools {
+    float: right !important;
+}
+.crayon-theme-bc .crayon-title {
+    color: #333 !important;
+}
+.crayon-theme-bc .crayon-language {
+    color: #999 !important;
+}
+
+/* Buttons */
+.crayon-theme-bc a.crayon-button {
+	background-color: transparent;
+}
+.crayon-theme-bc a.crayon-button:hover,
+.crayon-theme-bc a.crayon-button.crayon-pressed:hover {
+	background-color: #EEE;
+    color: #666;
+}
+/* :active MUST come after :hover */
+.crayon-theme-bc a.crayon-button.crayon-pressed,
+.crayon-theme-bc a.crayon-button.crayon-pressed:active,
+.crayon-theme-bc a.crayon-button:active {
+	background-color: #BCBCBC;
+    color: #FFF;
+}
+
+/* End Code Style ================== */
+
+/* Syntax Highlighting ============= */
+.crayon-theme-bc .crayon-pre .c {
+    color: #ff8000 !important;
+}
+.crayon-theme-bc .crayon-pre .p {
+    color: #308060 !important;
+}
+.crayon-theme-bc .crayon-pre .s {
+    color: #008000 !important;
+}
+.crayon-theme-bc .crayon-pre .k,
+.crayon-theme-bc .crayon-pre .st,
+.crayon-theme-bc .crayon-pre .r,
+.crayon-theme-bc .crayon-pre .t,
+.crayon-theme-bc .crayon-pre .m {
+    color: #E956B0 !important;
+}
+.crayon-theme-bc .crayon-pre .ta {
+	color: #FF0000 !important;
+}
+.crayon-theme-bc .crayon-pre .i {
+    color: #000 !important;
+}
+.crayon-theme-bc .crayon-pre .v {
+    color: #002D7A !important;
+}
+.crayon-theme-bc .crayon-pre .e {
+	color: #1986A6 !important;
+}
+.crayon-theme-bc .crayon-pre .cn {
+    color: #ce0000 !important;
+}
+.crayon-theme-bc .crayon-pre .o,
+.crayon-theme-bc .crayon-pre .h {
+    color: #006fe0 !important;
+}
+.crayon-theme-bc .crayon-pre .sy {
+	color: #333 !important;
+}
+.crayon-theme-bc .crayon-pre .n {
+	color: #666 !important;
+	font-style: italic;
+}
+.crayon-theme-bc .crayon-pre .f {
+	color: #999 !important;
+}
+/* End Syntax Highlighting ========= */
+
+/* End Classic Scheme ============================================ */
