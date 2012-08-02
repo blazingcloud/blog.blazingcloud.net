@@ -11,13 +11,16 @@ div#footer {
 }
 
 body #content-wrapper {
-  padding-left: 61px;
+  padding-left: 6%;
   overflow:hidden;
 }
+
 .introduction {
   margin-top:51px;
   margin-bottom:37px;
 }
+
+
 .introduction h1 {
   font-family: PTSansNarrowRegular;
   font-size:1.75em
@@ -43,6 +46,38 @@ body #content-wrapper {
   font-size: 14px;
 }
 
+div#container div#searchbar-top div#searchform {
+	background-color: red;
+}
+
+#searchform #s{
+  height: 23px;
+  width: 70%;
+  padding: 1px 0;
+  float: left;
+  margin-bottom: 12%;
+}
+
+#searchform input.button {
+  float: left;
+  position:relative;
+  background: url("assets/sidebar/search-button.png") 0 0 no-repeat;
+  height: 32px;
+  width: 35px;
+  border: none;
+  margin-left: -3%;
+  top: -1px;
+}
+
+#searchform input.button:hover {
+  background-position: 0 -36px;
+}
+
+#searchform input.button:active {
+  background-position: 0 -71px;
+}
+
+
 .ctc a,
 .widget_recent_entries a,
 .entry .title {
@@ -51,17 +86,24 @@ body #content-wrapper {
   font-size:1.875em;
   text-decoration:none;
 }
+
 .ctc a ,
 .widget_recent_entries a {
   font-size:1.1875em;
   font-weight:none;
 }
+
 .widget_recent_entries a {
   margin-top:1em;
   margin-bottom:1em;
 }
+
 .ctc .widgettitle {
   margin-bottom:1em;
+}
+
+.tagcloud {
+  margin-top: 5%;
 }
 
 .tagcloud a{
@@ -78,10 +120,7 @@ body #content-wrapper {
 code, pre {
   font-family:courier;
 }
-.sidebar .widget {
-  margin-bottom:2em;
 
-}
 nav.archives {
   margin-top:2em;
   margin-bottom:1.5em;

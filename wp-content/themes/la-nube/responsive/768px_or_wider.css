@@ -16,15 +16,28 @@ div#footer div#footer-content div.contact-info li {
   width: 93%;
 }
 
+#searchbar-top, div#container div#searchbar-top{
+  display: none;
+}
+
+div#wrapper div#container div#side-bar {
+  float: left;
+  width: 30%;
+  padding-top: 0.8%;
+}
+
 @media screen and (max-width: 900px) {
-  div#footer div#footer-content div.contact-info {
-    padding: 0px;
-    width: 60%;
-  }
-  
   div#footer div#footer-content div.contact-info li {
     display: block;
     padding: 10px 0;
+  }
+  
+  div#footer div#footer-content div.footer-logo img {
+    display: none;
+  }
+
+  div#footer div#footer-content div.footer-logo {
+    background: url("../assets/footer/only-shadow.png") no-repeat scroll center center transparent;
   }
 }
 
@@ -33,14 +46,7 @@ div#footer div#footer-content div.contact-info li {
     width: 60%;
     padding-right: 2%;
  }
- 
- div#wrapper div#content-wrapper div#side-bar {
-    width: 28%;
-    padding: 0% 5%;
-    overflow: hidden;
- }
-
- 
+  
 }
 
 

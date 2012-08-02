@@ -458,7 +458,7 @@ function widget_sandbox_search($args) {
 	extract($args);
 	$options = get_option('widget_sandbox_search');
 	$title = empty($options['title']) ? __( 'Search', 'sandbox' ) : attribute_escape($options['title']);
-	$button = empty($options['button']) ? __( 'Find', 'sandbox' ) : attribute_escape($options['button']);
+	$button = empty($options['button']) ? __( '', 'sandbox' ) : attribute_escape($options['button']);
 ?>
 			<?php echo $before_widget ?>
 				<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
@@ -487,7 +487,7 @@ function widget_sandbox_search_control() {
 	$button = attribute_escape($options['button']);
 ?>
 	<p><label for="search-title"><?php _e( 'Title:', 'sandbox' ) ?> <input class="widefat" id="search-title" name="search-title" type="text" value="<?php echo $title; ?>" /></label></p>
-	<p><label for="search-button"><?php _e( 'Button Text:', 'sandbox' ) ?> <input class="widefat" id="search-button" name="search-button" type="text" value="<?php echo $button; ?>" /></label></p>
+	<p><label for="search-button"><?php _e( 'Button Text:', 'sandbox' ) ?> <input class="widefat" id="search-button" name="search-button" type="image" value="<?php echo $button; ?>" /></label></p>
 	<input type="hidden" id="search-submit" name="search-submit" value="1" />
 <?php
 }
@@ -558,7 +558,7 @@ function sandbox_widgets_init() {
 	);
 
 	// Table for how many? Two? This way, please.
-	register_sidebars( 2, $p );
+	register_sidebars( 3, $p );
 
 	// Finished intializing Widgets plugin, now let's load the Sandbox default widgets; first, Sandbox search widget
 	$widget_ops = array(

@@ -3,7 +3,6 @@
     <div id="footer-content">
 	    
 	    <div class="footer-logo">
-	    	<img src="<?php bloginfo('stylesheet_directory')?>/assets/services_footer_logo.png" alt="Blazing Cloud Logo"/>
 	    </div>
 	    
 	    <div class="contact-info">

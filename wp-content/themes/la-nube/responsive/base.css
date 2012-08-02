@@ -64,7 +64,7 @@ div#wrapper div#header {
 }
 
 div#header a.logo {
-  width: 70%;
+  width: 64%;
   float: left;
 }
 
@@ -106,13 +106,13 @@ div#wrapper div#content-wrapper {
   overflow: hidden; 
 }
 
-div#content-wrapper div#blog-title {
+div#content-wrapper div#blog-title, div#container div#blog-title {
   width: 100%;
   overflow: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 2px;
 }
 
-div#content-wrapper div#blog-title h1{
+div#content-wrapper div#blog-title h1, div#container div#blog-title h1{
   font-size: 30px;
   font-family: "Arial Narrow",Arial;
 }
@@ -129,56 +129,149 @@ div#content-wrapper hr {
 }
 
 div#content-wrapper div#main-content {
-  width: 66.59%;
+  width: 62.59%;
   overflow: hidden;
   float: left;
+  padding-top: 18px;
 }
 
 div#content-wrapper div#side-bar {
-  width: 27.41%;
-  float: left;
+  width: 32%;
+  overflow: hidden;
+  padding-top: 22px;
 }
 
-div#content-wrapper div#side-bar h2 {
+
+div#content-wrapper div#side-bar h2 ,label{
   font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono";
-  padding-bottom: 1%;
+  padding-bottom: 2.6%;
+}
+
+
+div#content-wrapper div#side-bar div#follow-links a{
+  padding: 2px;
+  margin: 0px;
+}
+
+div#follow-links {
+  overflow: hidden;
+}
+
+div#content-wrapper div#side-bar div#ads {
+  overflow: hidden;
+  padding-top: 5%;
+  display: none;
 }
 
 div#content-wrapper div#side-bar hr {
   width: 100%;
   right: 1px;
+  top: 1px;
   position: relative;
   clear:both;
   border: 0;
   border-top-width: 1px ;
   border-top-style:solid; 
-  border-top-color:#eaeaea; 
+  border-top-color:#eaeaea;
 }
 
 
-div#content-wrapper div#side-bar div#search-blog {
- padding: 10px 0px 20px 0px; 
-}
-
-div#content-wrapper div#side-bar div#search-blog input{
-  margin: 0px; 
-}
-
-div#content-wrapper div#side-bar div#search-blog img{
-  height: 24px;
-  margin: 0px 0px -8px -5px;
-}
-
-div#content-wrapper div#side-bar div#ads {
-  margin: 20px 0px;
+/*Search Results page */
+div#wrapper {
+  max-width: 1024px;
   overflow: hidden;
+  padding-left: 0.8%;
 }
 
-
-div#content-wrapper div#side-bar div#ads span{
-  padding: 20px 78px;
+div#wrapper div#container{
+  padding-left: 61px;
   overflow: hidden;
+  width:90%;
 }
+
+div#wrapper div#container div#content .page-title {
+  display: block;
+  font-family: PTSansNarrowBold;
+  font-size: 1.875em;
+  padding-top: 0.7%;
+}
+
+div#wrapper div#container div#content .entry-content,.entry-content p, .entry li{
+    line-height: 1.6;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
+}
+
+.entry-meta
+ {
+  line-height: 1.6;
+  margin-right: 3em;
+  margin-bottom: 1em;
+}
+
+.entry-title {
+  line-height: 1.6;
+  margin-right: 2em;
+}
+
+div#wrapper div#container hr{
+  width: 100%;
+  right: 1px;
+  top: 5px;
+  position: relative;
+  clear:both;
+  border: 0;
+  border-top-width: 1px ;
+  border-top-style:solid; 
+  border-top-color:#eaeaea;
+  padding-bottom: 2.2%;
+}
+
+div#wrapper div#container .sidebar hr {
+  width: 100%;
+  right: 1px;
+  top: 5px;
+  position: relative;
+  clear:both;
+  border: 0;
+  border-top-width: 1px ;
+  border-top-style:solid; 
+  border-top-color:#eaeaea;
+  padding-bottom: 2%;
+}
+
+div#wrapper div#container h2 {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono";
+  padding-bottom: 2.6%;
+}
+
+div#wrapper div#container div#content div#nav-above, div#nav-below {
+  padding-bottom: 2%;
+}
+
+div#wrapper div#container div#content {
+  float: left;
+  width: 61%;
+  overflow:hidden;
+  margin-right: 5%;
+}
+
+
+
+div#wrapper div#container div#content .entry-content p, .entry-title a{
+  line-height: 1.6;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  margin-top: 4%;
+}
+
+
+div#wrapper div#content-wrapper div#nav-below {
+  padding-top: 2%;
+}
+/*End of Search results page*/
+
 
 /* End of div#wrapper */
 
@@ -195,18 +288,17 @@ div#footer div#footer-content {
 }
 
 div#footer div#footer-content div.footer-logo {
-  width: 27%;
-  margin-left: 6%;
+  background: url("../assets/footer/only-shadow.png") no-repeat scroll center center transparent;
+  width: 100%;
+  margin: 0;
   min-height: 73px;
   min-width:228px;
-  float: left;
 }
 
 div#footer div#footer-content div.contact-info {
-  float: left;
-  width: 67%;
-  min-height: 70px;
-  padding-top: 23px;
+  width: 100%;
+  padding-top: 15px;
+  text-align: center;
 }
 
 
@@ -221,8 +313,9 @@ div#footer div#footer-content div.contact-info ul li span {
 }
 
 div#footer div#footer-content div.footer-copyright {
-  float: left;
   width: 100%;
+  text-align: center;
+  padding-top: 1%;
 }
 
 .copyright {

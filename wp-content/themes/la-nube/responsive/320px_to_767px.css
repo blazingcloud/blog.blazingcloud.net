@@ -8,13 +8,13 @@ div#header a.logo, div#header ul#nav {
 }
 
 div#header ul#nav {
-	padding-left: 3%;
+	padding: 5% 0 1.5% 3%;
 }
 
 div#header ul#nav li {
 	float:none;
 	display: inline;	
-	padding: 0px;
+	padding: 0 2% 0 0;
 	margin: 0px;
 }
 
@@ -32,19 +32,112 @@ div#header a.logo img {
 	margin: 0px auto;
 }
 
+div#content-wrapper div#blog-title h1 {
+	margin: 0 auto;
+	padding-top: 10px;
+	text-align: center;
+}
+
+div#content-wrapper div#blog-title p {
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	line-height: 1.6;
+}
+
 div#wrapper div#content-wrapper div#main-content {
 	width: 100%;
 }
+
+/*blog elements*/
+.entry .meta {
+	width: 85%;
+}
+
+.widget_recent_entries, hr {
+	width: 85%;
+}
+
+/*End of blog elements*/
 
 div#wrapper div#content-wrapper div#main-content div#nav-below{
 	margin-bottom: 2%;
 }
  
 div#wrapper div#content-wrapper div#side-bar {
-	width: 50%;
+	overflow: hidden;
+	width: 90%;
+	padding-top: 0px;
 }
 
-div#wrapper div#content-wrapper div#side-bar ul li.widget_tag_cloud {
+.sidebar div#search-blog {
+	display: none;
+}
+
+#searchbar-top {
+	width: 100%;
+	margin: 0 auto; 
+}
+
+#searchbar-top ul li h2{
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+#searchform {
+	width: 65%;
+	margin: 0 auto;
+}
+
+#searchbar-top #searchform #s {
+  margin-bottom: 7%;
+}
+
+#searchform #s{
+	margin-left: 10%;
+}
+
+/*Search Results page */
+div#wrapper div#container div#content {
+  width: 100%;
+  float: left;
+}
+
+
+div#wrapper div#secondary {
+  display: none;
+}
+
+div#wrapper div#container {
+	width: 90%;
+	padding-left: 6%;
+}
+
+div#wrapper div#container div#content{
+	width: 100%;
+	overflow: hidden;
+}
+
+div#container div#blog-title h1, div#container div#blog-title p {
+	text-align: center;
+	line-height: 1.7;
+}
+
+div#wrapper div#container div#sidebar {
+	width: 100%;
+}
+
+div#follow-links {
+	padding-bottom: 2%;
+}
+
+div#wrapper div#container h2{
+	
+}
+
+/*End of Search results page*/
+
+div#wrapper div#content-wrapper div#side-bar ul li.widget_tag_cloud, .textwidget{
 	display: none;
 }
 
@@ -52,15 +145,3 @@ div#footer div#footer-content div.footer-logo img {
 	display: none;
 }
 
-div#footer div#footer-content div.footer-logo {
-    background: url('../assets/footer/only-shadow.png') no-repeat;
-    background-position: center center;
-    margin: 0;
-    width: 100%;
-}
-
-
-div#footer div#footer-content div.contact-info {
-	text-align:center;
-	width: 100%;
-}

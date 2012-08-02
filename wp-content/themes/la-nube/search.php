@@ -1,8 +1,22 @@
 <?php get_header() ?>
-
+	
 	<div id="container">
-		<div id="content">
+		
+		<div id='blog-title'>
+			<h1>OUR BLOG</h1>
+			<p>Thoughts on development, design and the world we live in.</p>
+		</div>
+		<hr/>
+		<div id="searchbar-top">
+			<ul>
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
+				<?php endif; // end primary sidebar widgets  ?>
+			</ul>
+			<hr/>
+		</div>
 
+		<div id="content">
+		
 <?php if ( have_posts() ) : ?>
 
 		<h2 class="page-title"><?php _e( 'Search Results for:', 'sandbox' ) ?> <span><?php the_search_query() ?></span></h2>
@@ -50,18 +64,21 @@
 				<div class="entry-content">
 					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'sandbox' ) ?></p>
 				</div>
-				<form id="searchform-no-results" class="blog-search" method="get" action="<?php bloginfo('home') ?>">
+				<!--<form id="searchform-no-results" class="blog-search" method="get" action="<?php bloginfo('home') ?>">
 					<div>
 						<input id="s-no-results" name="s" class="text" type="text" value="<?php the_search_query() ?>" size="40" />
-						<input class="button" type="submit" value="<?php _e( 'Find', 'sandbox' ) ?>" />
+						<input class="button" type="submit"/>
 					</div>
-				</form>
+				</form>-->
 			</div><!-- .post -->
 
 <?php endif; ?>
 
 		</div><!-- #content -->
-	</div><!-- #container -->
+	
 
-<?php get_sidebar() ?>
+<div id="side-bar" class='tile'>           
+	<?php get_sidebar() ?>
+</div><!-- #side-bar -->
+</div><!-- #container -->
 <?php get_footer() ?>
