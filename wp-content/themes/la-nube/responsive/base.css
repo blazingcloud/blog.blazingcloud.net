@@ -270,6 +270,10 @@ div#wrapper div#container div#content .entry-content p, .entry-title a{
 div#wrapper div#content-wrapper div#nav-below {
   padding-top: 2%;
 }
+
+div#wrapper div#container div#side-bar div#ads {
+  display: none;
+}
 /*End of Search results page*/
 
 
