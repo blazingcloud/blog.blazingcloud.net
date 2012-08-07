@@ -1,9 +1,4 @@
 <?php get_header() ?>
-  <div id="content-wrapper">
-    <div id="side-bar">
-      <?php get_sidebar() ?>
-    </div>
-
     <div id="container">
       <div id="content">
 
@@ -45,7 +40,8 @@
         </div>
 
       </div><!-- #content -->
+      <div id="side-bar" class='tile'>           
+		<?php get_sidebar() ?>
+	</div><!-- #side-bar -->
     </div><!-- #container -->
-
-</div>
 <?php get_footer() ?>
