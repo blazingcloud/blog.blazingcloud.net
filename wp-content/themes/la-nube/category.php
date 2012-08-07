@@ -1,6 +1,17 @@
 <?php get_header() ?>
-
-	<div id="container">
+<div id="container">
+		<div id='blog-title'>
+			<h1>OUR BLOG</h1>
+			<p>Thoughts on development, design and the world we live in.</p>
+		</div>
+		<hr/>
+		<div id="searchbar-top">
+			<ul>
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
+				<?php endif; // end primary sidebar widgets  ?>
+			</ul>
+			<hr/>
+		</div>
 		<div id="content">
 
 			<h2 class="page-title"><?php _e( 'Category Archives:', 'sandbox' ) ?> <span><?php single_cat_title() ?></span></h2>
@@ -42,7 +53,10 @@
 			</div>
 
 		</div><!-- #content -->
-	</div><!-- #container -->
+	
 
-<?php get_sidebar() ?>
+<div id="side-bar" class='tile'>           
+	<?php get_sidebar() ?>
+</div><!-- #side-bar -->
+</div><!-- #container -->
 <?php get_footer() ?>

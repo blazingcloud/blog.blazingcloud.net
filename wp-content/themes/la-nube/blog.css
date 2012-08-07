@@ -15,12 +15,6 @@ body #content-wrapper {
   overflow:hidden;
 }
 
-.introduction {
-  margin-top:51px;
-  margin-bottom:37px;
-}
-
-
 .introduction h1 {
   font-family: PTSansNarrowRegular;
   font-size:1.75em
@@ -120,6 +114,7 @@ div#container div#searchbar-top div#searchform {
 .entry .meta {
   margin-top:-0.5em;
   font-weight:bold;
+  margin-bottom: 3%;
 }
 
 code, pre {

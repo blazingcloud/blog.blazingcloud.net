@@ -34,6 +34,36 @@ audio, video {
   font-weight: normal;
 }
 
+div#content-wrapper div#blog-title h1, div#container div#blog-title h1 {
+  font-size: 30px;
+  font-family: "Arial Narrow",Arial;
+}
+
+div#wrapper div#content-wrapper div#main-content h2 {
+  font-family: PTSansNarrowBold;
+  font-size: 27px;
+}
+
+div#wrapper div#content-wrapper div#main-content h3 {
+  font-family: PTSansNarrowBold;
+  font-size: 25px;
+}
+
+div#wrapper div#content-wrapper div#main-content h4 {
+  font-family: PTSansNarrowBold;
+  font-size: 23px;
+}
+
+div#wrapper div#content-wrapper div#main-content h5 {
+  font-family: PTSansNarrowBold;
+  font-size: 21px;
+}
+
+div#wrapper div#content-wrapper div#main-content h6 {
+  font-family: PTSansNarrowBold;
+  font-size: 19px;
+}
+
 img {
   margin:0;
 }
@@ -110,11 +140,6 @@ div#content-wrapper div#blog-title, div#container div#blog-title {
   width: 100%;
   overflow: hidden;
   padding-bottom: 2px;
-}
-
-div#content-wrapper div#blog-title h1, div#container div#blog-title h1{
-  font-size: 30px;
-  font-family: "Arial Narrow",Arial;
 }
 
 div#content-wrapper hr {
@@ -196,7 +221,7 @@ div#wrapper div#container div#content .page-title {
   padding-top: 0.7%;
 }
 
-div#wrapper div#container div#content .entry-content,.entry-content p {
+div#wrapper div#container div#content .entry-content,.entry-content p   {
     line-height: 1.6;
     margin-bottom: 2em;
     margin-right: 2em;
