@@ -25,6 +25,11 @@ body #content-wrapper {
   font-family: PTSansNarrowRegular;
   font-size:1.75em
 }
+
+.entry .content ul {
+  list-style: disc inside none;
+}
+
 .entry .content , .entry p, .entry li {
   margin-top:2em;
   margin-bottom:2em;
@@ -47,7 +52,7 @@ body #content-wrapper {
 }
 
 div#container div#searchbar-top div#searchform {
-	background-color: red;
+  background-color: red;
 }
 
 #searchform #s{
