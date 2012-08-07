@@ -203,6 +203,10 @@ div#wrapper div#container div#content .entry-content,.entry-content p, .entry li
     margin-top: 2em;
 }
 
+.entry li {
+  line-height: 2;
+}
+
 .entry-meta
  {
   line-height: 1.6;

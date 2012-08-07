@@ -30,7 +30,7 @@ body #content-wrapper {
   list-style: disc inside none;
 }
 
-.entry .content , .entry p, .entry li {
+.entry .content , .entry p {
   margin-top:2em;
   margin-bottom:2em;
   margin-right:2em;
