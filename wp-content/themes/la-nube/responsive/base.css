@@ -143,9 +143,9 @@ div#content-wrapper div#blog-title, div#container div#blog-title {
 }
 
 div#content-wrapper hr {
-  width: 94%;
+  width: 100%;
   position: relative;
-  right: 28px;
+  right: 3px;
   clear: both;
   border: 0;
   border-top-width: 1px ;

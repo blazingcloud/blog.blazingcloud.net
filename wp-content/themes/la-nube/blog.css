@@ -27,9 +27,9 @@ body #content-wrapper {
 .entry .content , .entry p {
   margin-top:2em;
   margin-bottom:2em;
-  margin-right:2em;
   line-height: 1.6;
 }
+
 
 .entry img {
   margin: 5% 0%;
@@ -50,9 +50,8 @@ div#container div#searchbar-top div#searchform {
 }
 
 #searchform #s{
-  height: 23px;
+  height: 25px;
   width: 70%;
-  padding: 1px 0;
   float: left;
   margin-bottom: 12%;
 }
@@ -61,7 +60,7 @@ div#container div#searchbar-top div#searchform {
   float: left;
   position:relative;
   background: url("assets/sidebar/search-button.png") 0 0 no-repeat;
-  height: 32px;
+  height: 33px;
   width: 35px;
   border: none;
   margin-left: -3%;
