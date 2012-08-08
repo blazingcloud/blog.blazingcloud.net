@@ -19,7 +19,7 @@
           media='screen and (min-width:320px) and (max-width:767px) ' />
     <!-- small landscape device -->
     <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/small/320px_to_480px.css"  
+          href="<?php bloginfo('stylesheet_directory') ?>/responsive/320px_to_767px.css"  
           media='screen and (min-width:320px) and (max-width:480px) ' />
     <!-- wide devices -->
     <link rel="stylesheet" 
@@ -27,7 +27,7 @@
           media='screen and (min-width:768px)' />
     <!-- wide tablet device -->
     <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/wide/768px_to_1024px.css"  
+          href="<?php bloginfo('stylesheet_directory') ?>/responsive/768px_or_wider.css"  
           media='screen and (min-width:768px) and (max-width:1024px)' />
 
 	<link href="<?php bloginfo('stylesheet_url') ?>" rel="stylesheet" type="text/css" /> 
