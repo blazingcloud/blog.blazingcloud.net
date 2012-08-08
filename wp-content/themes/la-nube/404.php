@@ -1,13 +1,7 @@
 <?php get_header() ?>
 
-<div id="content-wrapper">
-    <div id="side-bar">           
-        <?php get_sidebar() ?>
-    </div><!-- side-bar -->
-            
+<div id="content-wrapper">            
     <div id="main-content">
-
-
 
 			<div id="post-0" class="post error404 not-found">
 				<h2 class="entry-title"><?php _e( 'Not Found', 'sandbox' ) ?></h2>
@@ -22,10 +16,10 @@
 				</form>
 			</div><!-- .post -->
 
-        <div id="footer">
-            <p>Copyright 2010-2011, Blazing Cloud, Inc.</p>
-        </div>
     </div> <!-- #main-content -->
+    <div id="side-bar" class='tile'>           
+	    <?php get_sidebar() ?>
+	</div><!-- #side-bar -->
 </div><!-- #content-wrapper -->
 
 <?php get_footer() ?>

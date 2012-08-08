@@ -40,6 +40,8 @@ get_header(); ?>
 
 	</div>
 
-<?php get_sidebar(); ?>
+<div id="side-bar" class='tile'>           
+	<?php get_sidebar() ?>
+</div><!-- #side-bar -->
 
 <?php get_footer(); ?>
