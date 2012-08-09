@@ -4,16 +4,16 @@
 	<title><?php wp_title( '-', true, 'right' ); echo wp_specialchars( get_bloginfo('name'), 1 ) ?></title>
 	<meta name="google-site-verification" content="ZaAMis_-Ko3ZGTciJvbTeioaGsLkowQTR1SSkeMYJuE" />
   	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
-  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
   
   <link href="<?php bloginfo('stylesheet_directory') ?>/reset.css" rel="stylesheet" type="text/css" /> 
 
  <!-- default grid - expect this to get adjusted for different devices-->
     <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/grid.css">
+          href="<?php bloginfo('stylesheet_directory') ?>/responsive/grid.css" />
     <!-- default device-->
     <link rel="stylesheet" 
-          href="<?php bloginfo('stylesheet_directory') ?>/responsive/base.css">
+          href="<?php bloginfo('stylesheet_directory') ?>/responsive/base.css" />
     <!-- small devices -->
     <link rel="stylesheet" 
           href="<?php bloginfo('stylesheet_directory') ?>/responsive/320px_to_767px.css"  

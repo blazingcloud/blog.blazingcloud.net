@@ -58,6 +58,10 @@ div#wrapper div#content-wrapper div#main-content {
 	width: 85%;
 }
 
+div#content-wrapper div#side-bar h2, label {
+    font-family: "Lucida Sans Typewriter","Lucida Console",Monaco,"Bitstream Vera Sans Mono";
+}
+
 /*End of blog elements*/
 
 div#wrapper div#content-wrapper div#main-content div#nav-below{

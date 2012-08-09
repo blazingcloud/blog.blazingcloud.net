@@ -32,6 +32,10 @@ div#wrapper div#container div#side-bar {
     padding: 10px 0;
   }
   
+  div#content-wrapper div#side-bar h2, label {
+    font-family: "Lucida Sans Typewriter","Lucida Console",Monaco,"Bitstream Vera Sans Mono";
+}
+  
   div#footer div#footer-content div.footer-logo img {
     display: none;
   }
