@@ -89,7 +89,7 @@ div#wrapper div#content-wrapper div#side-bar {
 }
 
 #searchform {
-	width: 65%;
+	width: 60%;
 	margin: 0 auto;
 }
 
@@ -99,6 +99,7 @@ div#wrapper div#content-wrapper div#side-bar {
 
 #searchform #s{
 	margin-left: 10%;
+	font
 }
 
 /*Search Results page */
@@ -149,10 +150,3 @@ div#footer div#footer-content div.footer-logo img {
 	display: none;
 }
 
-
-@media screen and (max-width: 320px) {
-  #header-wrapper .header a.logo div{
-      background-position: 0 0;
-      background-size: 90% auto;
-  }
-}
