@@ -221,9 +221,13 @@ div#wrapper div#container div#content .page-title {
   padding-top: 0.7%;
 }
 
+div#wrapper div#container div#content .page-title span {
+  font-size: 22px;
+}
+
 div#wrapper div#container div#content .entry-content,.entry-content p   {
     line-height: 1.6;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     margin-right: 2em;
     margin-top: 2em;
 }
@@ -236,7 +240,7 @@ div#wrapper div#container div#content .entry-content,.entry-content p   {
  {
   line-height: 1.6;
   margin-right: 3em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .entry-title {
@@ -286,15 +290,10 @@ div#wrapper div#container div#content {
   margin-right: 5%;
 }
 
-
-
 div#wrapper div#container div#content .entry-content p, .entry-title a{
   line-height: 1.6;
-  margin-bottom: 2%;
   margin-right: 2%;
-  margin-top: 4%;
 }
-
 
 div#wrapper div#content-wrapper div#nav-below {
   padding-top: 2%;
