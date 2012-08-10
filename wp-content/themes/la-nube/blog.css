@@ -125,3 +125,9 @@ nav.archives a {
   font-size:1.5em;
 }
 
+
+@media screen and (max-width: 320px) {
+  #searchform #s{
+    width: 60%;
+  }
+}
