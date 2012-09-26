@@ -34,6 +34,10 @@ audio, video {
   font-weight: normal;
 }
 
+#content-wrapper strong {
+  font-weight: bold;
+}
+
 div#content-wrapper div#blog-title h1, div#container div#blog-title h1 {
   font-size: 30px;
   font-family: "Arial Narrow",Arial;
