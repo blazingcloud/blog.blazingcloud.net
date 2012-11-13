@@ -30,11 +30,20 @@ body #content-wrapper {
   line-height: 1.6;
 }
 
-
 .entry img {
   margin: 5% 0%;
   width: 100%;
   overflow: hidden;
+}
+
+.entry .wp-caption img {
+  margin-bottom: 0;
+}
+
+.wp-caption-text {
+  margin-top: 0;
+  font-style: italic;
+  font-size: 12px;
 }
 
 .entry li {
